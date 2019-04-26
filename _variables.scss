@@ -1,0 +1,8 @@
+$red: #e30613ff;
+$black: #0d181cff;
+
+
+// MIXINS
+@mixin font-size($sizeValue: 1) {
+  font-size: ($sizeValue / 16) * 1rem;
+}
