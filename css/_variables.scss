@@ -1,6 +1,10 @@
-$red: #e30613ff;
-$black: #0d181cff;
+$red: #ed1c24;
+$black: #191a21;
 
+$font-primary: 'atami';
+$font-stencil: 'atami-stencil';
+$font-sec: 'din';
+$font-cod: 'dincond';
 
 // MIXINS
 @mixin font-size($sizeValue: 1) {
