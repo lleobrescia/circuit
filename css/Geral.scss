@@ -73,119 +73,119 @@
 
 @font-face {
   font-family: 'din';
+  font-style: normal;
+  font-weight: 900;
   src: url('../fontes/din-black-webfont.woff') format('woff');
-  font-weight: 900;
-  font-style: normal;
 }
 
 @font-face {
   font-family: 'din';
+  font-style: italic;
+  font-weight: 900;
   src: url('../fontes/din-blackitalic-webfont.woff') format('woff');
-  font-weight: 900;
-  font-style: italic;
 }
 
 @font-face {
   font-family: 'din';
+  font-style: normal;
+  font-weight: bold;
   src: url('../fontes/din-bold-webfont.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
 }
 
 @font-face {
   font-family: 'din';
+  font-style: italic;
+  font-weight: bold;
   src: url('../fontes/din-bolditalic-webfont.woff') format('woff');
-  font-weight: bold;
-  font-style: italic;
 }
 
 @font-face {
   font-family: 'din';
+  font-style: normal;
+  font-weight: 300;
   src: url('../fontes/din-light-webfont.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
 }
 
 @font-face {
   font-family: 'din';
+  font-style: italic;
+  font-weight: 300;
   src: url('../fontes/din-lightitalic-webfont.woff') format('woff');
-  font-weight: 300;
-  font-style: italic;
 }
 
 @font-face {
   font-family: 'din';
+  font-style: normal;
+  font-weight: 500;
   src: url('../fontes/din-medium-webfont.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
 }
 
 @font-face {
   font-family: 'din';
+  font-style: italic;
+  font-weight: 500;
   src: url('../fontes/din-mediumitalic-webfont.woff') format('woff');
-  font-weight: 500;
-  font-style: italic;
 }
 
 @font-face {
   font-family: 'din';
+  font-style: normal;
+  font-weight: normal;
   src: url('../fontes/din-regular-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
 }
 
 @font-face {
   font-family: 'din';
-  src: url('../fontes/din-regularitalic-webfont.woff') format('woff');
-  font-weight: normal;
   font-style: italic;
-}
-
-@font-face {
-  font-family: 'dincond';
-  src: url('../fontes/dincond-black-webfont.woff') format('woff');
-  font-weight: 900;
-  font-style: normal;
-
-}
-
-@font-face {
-  font-family: 'dincond';
-  src: url('../fontes/dincond-bold-webfont.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-
-}
-
-@font-face {
-  font-family: 'dincond';
-  src: url('../fontes/dincond-light-webfont.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-
-}
-
-@font-face {
-  font-family: 'dincond';
-  src: url('../fontes/dincond-medium-webfont.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-
-}
-
-@font-face {
-  font-family: 'dincond';
-  src: url('../fontes/dincond-regular-webfont.woff') format('woff');
   font-weight: normal;
+  src: url('../fontes/din-regularitalic-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'dincond';
   font-style: normal;
+  font-weight: 900;
+  src: url('../fontes/dincond-black-webfont.woff') format('woff');
+
+}
+
+@font-face {
+  font-family: 'dincond';
+  font-style: normal;
+  font-weight: bold;
+  src: url('../fontes/dincond-bold-webfont.woff') format('woff');
+
+}
+
+@font-face {
+  font-family: 'dincond';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fontes/dincond-light-webfont.woff') format('woff');
+
+}
+
+@font-face {
+  font-family: 'dincond';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fontes/dincond-medium-webfont.woff') format('woff');
+
+}
+
+@font-face {
+  font-family: 'dincond';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fontes/dincond-regular-webfont.woff') format('woff');
 
 }
 
 @font-face {
   font-family: 'dinschrift';
-  src: url('../fontes/dinengschrift-webfont.woff') format('woff');
-  font-weight: normal;
   font-style: normal;
+  font-weight: normal;
+  src: url('../fontes/dinengschrift-webfont.woff') format('woff');
 
 }
 
@@ -197,10 +197,10 @@
 
 body {
   background-color: $black;
+  font-family: $font-primary, sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
-  font-family: $font-primary, sans-serif;
 
   .to-left {
     float: left;
@@ -462,6 +462,7 @@ ul {
 /*Box de Conteúdo*/
 
 .home-menu {
+  margin-bottom: 100px;
   margin-top: -40px;
 
   &__wrapper {
@@ -469,15 +470,15 @@ ul {
   }
 
   &__item {
-    display: inline-block;
-    width: 245px;
-    height: 86px;
-    text-align: center;
-    line-height: 86px;
-    border: solid 2px white;
     background-color: $black;
-    position: relative;
+    border: solid 2px white;
+    display: inline-block;
+    height: 86px;
+    line-height: 86px;
     margin-right: 68px;
+    position: relative;
+    text-align: center;
+    width: 245px;
 
     &:hover {
       background-color: $yellow;
@@ -485,14 +486,14 @@ ul {
     }
 
     a {
-      @include font-size(30);
       color: white;
-      text-transform: uppercase;
       font-family: $font-stencil;
       font-weight: bold;
-      position: absolute;
       left: 0;
+      position: absolute;
       right: 0;
+      text-transform: uppercase;
+      @include font-size(30);
 
       &:hover {
         color: $black;
@@ -501,12 +502,305 @@ ul {
   }
 }
 
+.content-home {
+  background-image: url('../imagens/home-bg.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &__hr {
+    margin: auto;
+    width: $site-size;
+    border-color: $yellow;
+    margin-top: 150px;
+  }
+}
+
+.lista-previa {
+  background-image: url('../imagens/previa-grid-bg.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: auto;
+  margin-bottom: 175px;
+  padding-top: 20px;
+  width: $site-size;
+
+  &--invert {
+    background-image: url('../imagens/previa-grid-bg--invert.png');
+  }
+
+  &__title {
+    display: grid;
+    grid-template-columns: -webkit-max-content 1fr;
+    grid-template-columns: max-content 1fr;
+    margin-bottom: 30px;
+
+    span {
+      color: white;
+      font-family: $font-stencil;
+      font-weight: bold;
+      padding-left: 42px;
+      padding-right: 40px;
+      text-transform: uppercase;
+      @include font-size(65);
+    }
+
+    hr {
+      background-color: white;
+      height: 7px;
+      margin-top: 58px;
+      width: 100%;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-column-gap: 60px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.produto-previa {
+  position: relative;
+
+  &__link {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &__img {
+    background-color: white;
+    display: block;
+    margin: auto;
+    max-width: 700px;
+    width: 100%;
+
+    img {
+      display: block;
+      margin: auto;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    border: solid 2px white;
+    color: white;
+    display: block;
+    font-family: $font-sec;
+    line-height: 93px;
+    margin-bottom: 24px;
+    margin-top: 45px;
+    min-height: 93px;
+    text-align: center;
+    width: 100%;
+    @include font-size(27);
+  }
+
+  &__preco {
+    .valor {
+      color: white;
+      display: block;
+      font-family: 'atami-display';
+      @include font-size(44);
+    }
+
+    .parcela {
+      color: $yellow;
+      display: block;
+      font-family: $font-sec;
+      font-style: italic;
+      @include font-size(26);
+    }
+  }
+}
+
+.sobre-home {
+  background-image: url('../imagens/home-sobre-bg.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 25%;
+  display: grid;
+  grid-column-gap: 90px;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  margin-bottom: 194px;
+  padding-bottom: 101px;
+  width: $site-size;
+
+
+  img {
+    width: 100%;
+  }
+
+  &__desc {
+    zoom: 70%;
+
+    img {
+      display: block;
+      margin: auto;
+      max-width: 800px;
+    }
+
+    h3 {
+      border: solid 2px white;
+      color: white;
+      display: block;
+      font-family: $font-stencil;
+      line-height: 133px;
+      margin-bottom: 30px;
+      margin-top: 63px;
+      min-height: 133px;
+      text-align: center;
+      text-transform: uppercase;
+      width: 100%;
+      @include font-size(40);
+    }
+
+    p {
+      color: white;
+      font-family: 'din';
+      font-style: italic;
+      font-weight: 300;
+      margin-bottom: 78px;
+      @include font-size(39);
+    }
+
+    a {
+      background-color: white;
+      color: $red;
+      font-family: 'din';
+      font-weight: bold;
+      padding: 40px 60px;
+      @include font-size(47);
+
+      img {
+        display: inline-block;
+        margin-right: 15px;
+        max-width: 26px;
+        vertical-align: baseline;
+      }
+    }
+  }
+}
+
+.campeonato {
+  clear: both;
+  margin: auto;
+  margin-bottom: 155px;
+  width: $site-size;
+
+  img {
+    width: 100%;
+  }
+
+  &__title {
+    display: block;
+    margin-top: -250px;
+    text-align: right;
+
+    h3 {
+      background-color: white;
+      color: $black;
+      display: inline-block;
+      font-family: $font-stencil;
+      font-weight: bold;
+      margin-bottom: 15px;
+      padding: 40px 90px;
+      text-transform: uppercase;
+      @include font-size(109);
+    }
+
+    h4 {
+      color: white;
+      font-family: $font-primary;
+      text-transform: uppercase;
+      @include font-size(63);
+    }
+
+    span {
+      color: white;
+      @include font-size(29);
+
+      a {
+        color: white;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.home-videos {
+  margin: auto;
+  width: $site-size;
+
+  &__grid {
+    display: grid;
+    grid-column-gap: 60px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__item {
+    display: block;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 100%;
+
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 56.25%;
+
+    }
+
+    iframe {
+      border: 0;
+      bottom: 0;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    align-items: flex-end;
+    background-color: white;
+    -webkit-box-align: end;
+    clear: both;
+    display: inline-block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: end;
+    float: right;
+    height: 400px;
+    margin-top: -262px;
+    padding: 15px 60px;
+    position: relative;
+    text-align: right;
+    z-index: -1;
+    margin-bottom: 200px;
+
+    h3 {
+      color: $black;
+      font-family: $font-stencil;
+      text-transform: uppercase;
+      @include font-size(78);
+    }
+  }
+}
+
 /*Banners*/
 
 .banner {
   img {
-    width: 100%;
     height: auto;
+    width: 100%;
   }
 
   &-header {
