@@ -201,6 +201,44 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   font-family: $font-primary, sans-serif;
+
+  .to-left {
+    float: left;
+  }
+
+  .to-right {
+    clear: right;
+    float: right;
+  }
+
+  .align-right {
+    text-align: right;
+  }
+
+  .align-left {
+    text-align: left;
+  }
+
+  .align-center {
+    text-align: center;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  border: 0 none;
+}
+
+input,
+select {
+  outline: 0 none;
+}
+
+ul {
+  list-style: none outside none;
 }
 
 
@@ -265,49 +303,11 @@ body {
   display: block;
 }
 
-a {
-  text-decoration: none;
-}
-
-img {
-  border: 0 none;
-}
-
-input,
-select {
-  outline: 0 none;
-}
-
-ul {
-  list-style: none outside none;
-}
-
 .sprite {
   background-image: url("../imagens/sprite.png");
   background-repeat: no-repeat;
   text-align: left;
   text-indent: -9999px;
-}
-
-body .to-left {
-  float: left;
-}
-
-body .to-right {
-  clear: right;
-  float: right;
-}
-
-body .align-right {
-  text-align: right;
-}
-
-body .align-left {
-  text-align: left;
-}
-
-body .align-center {
-  text-align: center;
 }
 
 .w-5 {
@@ -461,87 +461,82 @@ body .align-center {
 
 /*Box de Conteúdo*/
 
-#content {
-  display: table;
-  margin: 10px auto;
-  text-align: left;
-  width: 88%;
-  /*border-bottom: 2px solid #f8f7f7;*/
-}
+.home-menu {
+  margin-top: -40px;
 
-#col-left {
-  display: block;
-  float: left;
-  margin: 0 20px 10px 0;
-  width: 190px;
-}
+  &__wrapper {
+    text-align: center;
+  }
 
-#col-right {
-  display: block;
-  float: right;
-  width: 160px;
-}
+  &__item {
+    display: inline-block;
+    width: 245px;
+    height: 86px;
+    text-align: center;
+    line-height: 86px;
+    border: solid 2px white;
+    background-color: $black;
+    position: relative;
+    margin-right: 68px;
 
-#col-content {
-  display: block;
-  overflow: hidden;
-}
+    &:hover {
+      background-color: $yellow;
+      border: solid 2px black;
+    }
 
+    a {
+      @include font-size(30);
+      color: white;
+      text-transform: uppercase;
+      font-family: $font-stencil;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+      right: 0;
+
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+}
 
 /*Banners*/
 
-.banner-header {
-  margin: 0 auto;
-  position: relative;
-  width: 100%;
-}
+.banner {
+  img {
+    width: 100%;
+    height: auto;
+  }
 
-.banner-header .banner-jquery {
-  overflow: hidden;
-}
+  &-header {
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
 
-.banner-header .banner-jquery .owl-buttons div {
-  background: url("../imagens/sprite.png") no-repeat;
-  height: 50px;
-  position: absolute;
-  text-indent: -9999px;
-  top: 45%;
-  width: 44px;
-}
+    .banner-jquery {
+      overflow: hidden;
 
-.banner-header .banner-jquery .owl-buttons div.owl-prev {
-  background-position: -410px -117px;
-  left: 0;
-}
+      .owl-buttons div {
+        background: url("../imagens/sprite.png") no-repeat;
+        height: 50px;
+        position: absolute;
+        text-indent: -9999px;
+        top: 45%;
+        width: 44px;
 
-.banner-header .banner-jquery .owl-buttons div.owl-next {
-  background-position: -445px -117px;
-  right: 0;
-}
+        &.owl-prev {
+          background-position: -410px -117px;
+          left: 0;
+        }
 
-.banner-marcas .item {
-  margin: 3px;
-  text-align: center;
-}
-
-
-.banner-marcas .owl-buttons div.owl-next {
-  background-position: -516px -122px;
-  right: 8px;
-}
-
-.banner-marcas .owl-buttons div {
-  background: rgba(0, 0, 0, 0) url("../imagens/sprite.png") no-repeat scroll 0 0;
-  height: 36px;
-  position: absolute;
-  text-indent: -9999px;
-  top: 30%;
-  width: 28px;
-}
-
-.banner-marcas .owl-buttons div.owl-prev {
-  background-position: -493px -123px;
-  left: 8px;
+        &.owl-next {
+          background-position: -445px -117px;
+          right: 0;
+        }
+      }
+    }
+  }
 }
 
 .banners-side * {
@@ -1641,26 +1636,6 @@ body .align-center {
   display: block;
   height: 52px;
   width: 117px;
-}
-
-/*Ajax Loader*/
-
-.ajaxLoader {
-  background: url('../imagens/loader.gif') no-repeat center center #fff;
-  display: none;
-  filter: alpha(opacity=75);
-  height: 100%;
-  left: 0;
-  opacity: 0.75;
-  -moz-opacity: 0.75;
-  position: fixed;
-  _position: absolute;
-  *position: absolute;
-  top: 0;
-  _top: expression(eval(document.compatMode && document.compatMode=='CSS1Compat') ? documentElement.scrollTop: document.body.scrollTop);
-  *top: expression(eval(document.compatMode && document.compatMode=='CSS1Compat') ? documentElement.scrollTop: document.body.scrollTop);
-  width: 100%;
-  z-index: 9998;
 }
 
 /* Affiliate */
