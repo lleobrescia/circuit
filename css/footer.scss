@@ -1,490 +1,150 @@
 @import 'variables';
-@media only screen and (max-width: 1024px){
-  .institucional ul li {
-      float: left;
-      margin-right: 23px  !important;
-      line-height: 36px;
-  }
-  .entregas , .forma-pg{
-      float: left;
-      margin-left: 0 !important;
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: auto;
+  padding-bottom: 223px;
+  padding-top: 70px;
+  width: $site-size;
+
+  &__title {
+    color: $yellow;
+    font-family: $font-stencil;
+    font-weight: bold;
+    text-transform: uppercase;
+    @include font-size(36);
   }
 
-  }
-  @media only screen and (max-width: 768px){
-  .footer-content {
-      width: 909px !important;
-  }
-  .ecomm {
-      float: right;
-      line-height: 82px !important;
-      margin-top: -45px !important;
-      background: #fff !important;
-  }
-  }
-
-
-  #footer{
-      clear: both;
-
-  }
-  .footer-institutional {
-    float:left;
-    height:200px;
-  }
-  .ecomm {
-    float:right;
-      line-height: 148px;
-  }
-
-  .info-rodape {
-        margin-left: 48px;
-    margin-top: 13px;
-    float: left;
-    width: 900px;
-
-  }
-  .info-rodape  p{
-    float: left;
-    color: #aeaeae;
-    font-family: "Helvetica Neue L T Std";
-    font-size: 12px;
-  }
-
-
-
-  .entregas{
-    float: left;
-    margin-left: 45px;
-  }
-
-  .entregas p {
-    height: 18px;
-    color: #aeaeae;
-    font-family: "Helvetica Neue LT Std";
-    font-size: 14px;
-    margin-bottom: 10px;
-    line-height: 19px;
-  }
-  .footer-info {
-      margin-left: 286px;
-      margin-top: 32px;
-  }
-  .forma-pg{
-    float: left;
-    margin-left: 45px;
-  }
-  .fcontrol {
-    float:left;
-  }
-
-  .forma-pg p {
-      height: 18px;
-    color: #aeaeae;
-    font-family: "Helvetica Neue LT Std";
-    font-size: 14px;
-    margin-bottom: 5px;
-    line-height: 19px;
-  }
-  .footer-content{
-      width: 1200px;
-      margin: 0 auto;
-      text-align: left;
-  }
-  .antifraude {
-    float: left;
-  }
-  .thawte {
-    float:left;
-  }
-  .antifraude p {
-    width: 56px;
-    height: 18px;
-    color: #aeaeae;
-    font-family: "Helvetica Neue LT Std";
-    font-size: 14px;
-    margin-bottom: 5px;
-    line-height: 19px;
-  }
-  .rede-socia {
-    margin:16px  16px;
-  }
-  .rede-socia li {
-    float: left;
-    list-style-type: none;
-    margin-right: 15px;
-    width: 37px;
-  }
-  .rede-socia li a {
-    width: 37px;
-    height: 37px;
-  }
-  .rede-socia li a img {
-    display:block;
-  }
-
-
-  .footer-search{
-      background: #F47710;
-      text-align: center;
-  }
-
-  .footer-search fieldset{
-      border: none;
-      overflow: hidden;
-    padding: 7px;
-  }
-
-  .footer-search fieldset label{
-      float: left;
-  }
-
-  .footer-search-title{
-      color: #fff;
-      font-size: 24px;
-      font-weight: bold;
-      margin: 9px 15px 0 0;
-  }
-
-  .footer-search fieldset label input{
-      border: none;
-      color: #f47710;
-      font-family: arial,times new roman;
-      font-size: 18px;
-      padding: 7px 10px;
-      width: 765px;
-  }
-
-  .footer-search-buttom{
-      background-position: 0 -100px;
-      height: 36px;
-      line-height: 0;
-      width: 42px;
-      float: left;
-  }
-
-  .footer-top{
-      background: url(https://circuit.myciashop.com.br//Assets/Uploads/rodape.jpeg) repeat;
-      text-align: center;
-    padding: 20px 0;
-    overflow: hidden;
-  /*height: 200px;*/
-
-  }
-
-  .footer-top h3{
-      font-size: 16px;
-      margin-bottom: 15px;
-  }
-
-  .footer-institutional{
-         margin-top: 11px;
-  }
-
-  .footer-institutional li{
-    list-style: none;
-    float: left;
-  }
-
-  .footer-institutional li a{
-      color: #171717;
-      display: inline-block;
-      font-size: 12px;
-      padding: 2px;
-      transition: all 200ms ease-out 0s;
-  }
-
-  .footer-institutional li a:hover{
-      color: #444;
-  }
-
-  .coupom-rules{
-    width: 500px;
-    padding: 0 10px;
-  }
-
-  .coupom-rules-content{
-    margin: 15px 0;
-  }
-
-  .coupom-rules-content p{
-    display: block;
-    margin: 5px 0;
-    font-size: 11px;
-  }
-
-  .footer-paymentMethods{
-      margin-bottom: 15px;
-      margin-right: 3%;
-  max-width: 300px;
-  }
-
-
-  .paymentMethodsIcons-li{
-      display: inline-block;
-      list-style: outside none none;
-      margin: 0 3px 3px;
-  }
-
-  .footer-seals {
-      float: left;
-      overflow: hidden;
-      width: 250px;
-  }
-
-  .footer-fcontrol{
+  &__institucional {
+    a {
+      color: white;
       display: block;
-      margin: 0 0 15px 0;
+      font-family: 'din';
+      font-weight: 300;
+      text-transform: capitalize;
+      @include font-size(26);
+    }
   }
 
-  .footer_thawte{
-      background-position: -150px -50px;
-      display: block;
-      height: 30px;
-      margin: 0 0 15px 0;
-      width: 122px;
+  &__formas {
+    h4 {
+      color: $yellow;
+      font-family: 'din';
+      font-style: italic;
+      font-weight: 300;
+      margin-bottom: 10px;
+      @include font-size(28);
+    }
+
+    .entregas {
+      margin-bottom: 90px;
+      margin-top: 85px;
+    }
   }
 
-  .footer-ebit{
-    margin: 0 0 15px 0;
+  &__info {
+    text-align: right;
+
+    img {
+      max-width: 300px;
+
+    }
   }
 
-  .footer-blindado{
-    margin: 0 0 15px 0;
-  }
+  &-news {
+    margin-bottom: 88px;
+    margin-top: 92px;
 
-  .footer-facebookBox{
-  width: 30%;
-  }
+    &__form {
+      display: grid;
+      grid-column-gap: 23px;
+      grid-template-columns: -webkit-max-content -webkit-max-content -webkit-min-content;
+      grid-template-columns: -webkit-max-content -webkit-min-content;
+      grid-template-columns: max-content min-content;
+    }
 
-  .footer-middle{
-    padding: 20px 0;
-  }
+    &__input {
+      max-width: 240px;
 
-  .footer-social{
-      width: 500px;
-  }
-
-  .footer-social-title{
-      color: #fff;
-      display: inline-block;
-      font-size: 20px;
-      margin: 0 10px 0 0;
-    vertical-align: middle;
-  }
-
-  .footer-social a{
-      display: inline-block;
-      margin: 3px 7px;
-      transition: all 200ms ease-out 0s;
-    vertical-align:middle;
-  }
-
-  .footer-social a:hover{
-      opacity: 0.6;
-      transition: all 200ms ease-out 0s;
-  }
-
-  .footer-social-facebook{
-      background-position: 0 0;
-    width: 16px;
-      height: 30px;
-  }
-
-  .footer-social-twitter{
-      background-position: -50px 0;
-    width: 28px;
-      height: 23px;
-  }
-
-  .footer-social-pinterest{
-      background-position: -100px 0;
-    width: 28px;
-      height: 28px;
-  }
-
-  .footer-social-youtube{
-      background-position: -150px 0;
-    width: 24px;
-      height: 29px;
-  }
-
-  .footer-social-instagram{
-      background-position: -200px 0;
-    width: 28px;
-      height: 28px;
-  }
-
-  .footer-social-lastfm{
-      background-position: -250px 0;
-    width: 36px;
-      height: 21px;
-  }
-
-  .footer-social-google{
-      background-position: -469px 0;
-      height: 32px;
-      width: 22px;
-  }
-
-  .footer-contactUs{
-      width: 430px;
-    text-align: center;
-  }
-
-  .footer-contactUs p{
-      color: #fff;
-      display: block;
-      font-size: 20px;
-    margin-bottom: 4px;
-  }
-
-  .footer-contactUs span{
-      color: #ffffff;
-      display: block;
-      font-size: 15px;
-  }
-
-  .footer-bottom{
-      text-align: center;
-    padding-bottom: 20px;
-  }
-
-  .footer-text{
-      float: left;
-      width: 720px;
-      text-align: justify;
-      font-size: 13px;
-    margin-top: 20px;
-    color: #999;
-  }
-
-  .footer-imgs{
-      float: right;
-      margin-top: 20px;
-  }
-
-  .footer-ciashop{
-      width: 130px;
-      height: 34px;
-      display: inline-block;
-      background-position: -300px 0;
-      text-indent: -9999px;
-      margin-right: 10px;
-  }
-  .institucional {
-    width:100%;
-    background:#FE0000;
-    height:36px;
-  }
-
-  .institucional ul li {
-        float: left;
-      margin-right: 33px;
-      line-height: 36px;
-  }
-  .institucional ul li:last-child{
-    margin-right: 0px;
-  }
-  .institucional ul li a {
-    color:#fff;
-      font-size: 11px;
-    font-family: "Helvetica Neue LT Std";
-  }
-  .institucional ul li:hover{
-    background:#FEF900;
-  }
-  .institucional ul li:hover a {
-    font-family: "Helvetica Neue LT Std";
-      color: #373737;
-  }
-  .info-institucional {
-    width:1200px;
-    margin: 0 auto;
-  }
-
-  .institucional ul .logo-rodape:hover {
+      input {
         background: transparent;
+        border-color: white;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        color: white;
+        font-family: 'din';
+        padding: 15px 15px;
+        width: 100%;
+        @include font-size(29);
+
+        &::-webkit-input-placeholder {
+          color: white;
+        }
+
+        &:-ms-input-placeholder {
+          color: white;
+        }
+
+        &::-ms-input-placeholder {
+          color: white;
+        }
+
+        &::placeholder {
+          color: white;
+        }
+
+        &:-ms-input-placeholder {
+          color: white;
+        }
+
+        &::-ms-input-placeholder {
+          color: white;
+        }
+      }
+    }
+
+    &__btn {
+      background-color: white;
+      border: solid 1px white;
+      color: $black;
+      font-family: 'din';
+      font-weight: 500;
+      padding: 12px 15px;
+      @include font-size(29);
+    }
   }
 
-
-  .inst-0 {
-  background: url(../imagens/circuit-empresa.png);
-      background-repeat: no-repeat;
-      width: 21px;
-      height: 30px;
-      color: transparent !important;
-      padding: 7px 10px 11px 5px;
-
+  &-contato {
+    color: white;
+    font-family: 'din';
+    font-weight: 300;
+    @include font-size(26);
   }
-  .inst-0:hover {
-      background: url(../imagens/circuit-empresa-hover.png);
-      background-repeat: no-repeat;
+}
 
+.footer-sub {
+  background-color: $red;
+  padding-bottom: 60px;
+  padding-top: 70px;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr -webkit-min-content;
+    grid-template-columns: 1fr min-content;
+    margin: auto;
+    width: $site-size;
+
+    p {
+      color: white;
+      font-family: 'din';
+      font-weight: 300;
+      padding-right: 160px;
+      @include font-size(25);
+    }
+
+    a {
+      margin-top: 60px;
+    }
   }
-
-  .inst-1 {
-      background: url(../imagens/ciruit-padlock.png);
-      background-repeat: no-repeat;
-      width: 23px;
-      height: 30px;
-    padding: 7px 10px 11px 30px;
-
-  }
-  .inst-1:hover {
-      background: url(../imagens/ciruit-padlock-hover.png);
-      background-repeat: no-repeat;
-
-  }
-
-  .inst-2 {
-      background: url(../imagens/circuit-troca-devolucoes-white.png);
-      background-repeat: no-repeat;
-      width: 23px;
-      height: 30px;
-      padding: 6px 10px 10px 35px;
-
-  }
-  .inst-2:hover {
-      background: url(../imagens/circuit-troca-devolucoes.png);
-      background-repeat: no-repeat;
-  }
-
-  .inst-3 {
-      background: url(../imagens/circuit-representantes.png);
-      background-repeat: no-repeat;
-      width: 23px;
-      height: 30px;
-      padding: 10px 10px 10px 37px;
-  }
-  .inst-3:hover {
-      background: url(../imagens/circuit-representantes-hover.png);
-      background-repeat: no-repeat;
-  }
-
-  .inst-4 {
-      background: url(../imagens/circuit-vendas-corporativas.png);
-      background-repeat: no-repeat;
-      width: 23px;
-      height: 30px;
-      padding: 10px 10px 10px 41px;
-
-  }
-  .inst-4:hover {
-      background: url(../imagens/circuit-vendas-corporativas-hover.png);
-      background-repeat: no-repeat;
-
-  }
-  .inst-5 {
-      background: url(../imagens/circuit-lojista.png);
-      background-repeat: no-repeat;
-      width: 23px;
-      height: 30px;
-      padding: 10px 10px 10px 35px;
-
-  }
-  .inst-5:hover {
-      background: url(../imagens/circuit-lojista-hover.png);
-      background-repeat: no-repeat;
-
-  }
+}
