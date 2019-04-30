@@ -1,102 +1,133 @@
-<div class="heading-primary"><h2><strong>Meu</strong> Carrinho</h2></div>
+<h1 class="general-title">
+  <span>Meu Carrinho</span>
+  <hr>
+</h1>
+
 <div class="error">[A28][A29][A41][A42][A45][A66]</div>
 
-<div class="cart-links align-right">
-  <a href="[A0]" class="bt-big-secundary bt-buyMore">Continuar Comprando</a>
-  <a href="[A2]" class="bt-big-special bt-goToCheckout bt-realClick" style="display:none;">Concluir Compra</a>
-  <a href="javascript:void(0);" class="bt-big-special bt-goToCheckout btFakeCart">Concluir Compra</a>
-</div>
-
-<div class="cart-table">
+<section class="cart-table table-responsive">
   <table class="table">
     <thead>
       <tr>
-        <th class="table-title align-left" colspan="2" width="100%">Produto</th>
-        <th class="table-title">Presente</th>
-        <th class="table-title">Disponibilidade</th>
-        <th class="table-title">Preço</th>
-        <th class="table-title">Quantidade</th>
-        <th class="table-title">Subtotal</th>
-        <th class="table-title">&nbsp;</th>
+        <th>Produto</th>
+        <th>Presente</th>
+        <th>Disponibilidade</th>
+        <th>Preço</th>
+        <th>Quantidade</th>
+        <th>Subtotal</th>
       </tr>
     </thead>
     <tbody>
       <repeticao:produtos>
-          <tr class="table-item">
-              <td class="cart-product-image" width="90"><a href="[A24]"><img class="photo-product" src="[A3]?width=80&height=80" alt="[A4]" width="80" height="80" /></a></td>
-              <td class="cart-product-name">
-                <a href="[A24]">[A4]</a>
-            	<span class="cart-variantSelect">[A65]</span>
-                <!-- Contrato do produto -->
-                <condicao:contrato>
-                  <condicao:contrato_aceito>
-                    <div class="cart-contract alert alert-success custom-paddingV3 custom-paddingH3">
-                      <span onclick="[A44]"></span>&nbsp;<span>Contrato aceito</span>
-                      <div class="cart-contractInfo">
-                        <a href="[A43]"><small>(Ver contrato)</small></a>&nbsp;<small><a href="[A44]">(Cancelar)</a></small>
-                      </div>
-                    </div>
-                  </condicao:contrato_aceito>
+        <tr>
+          <td class="table__produto">
+            <a href="[A24]">
+              <img class="photo-product" src="[A3]?width=80&height=80" alt="[A4]" width="80" height="80" />
+            </a>
+            <a href="[A24]">[A4]</a>
+            <span class="cart-variantSelect">[A65]</span>
+            <!-- Contrato do produto -->
+            <condicao:contrato>
+              <condicao:contrato_aceito>
+                <div class="cart-contract alert alert-success custom-paddingV3 custom-paddingH3">
+                  <span onclick="[A44]"></span>&nbsp;
+                  <span>Contrato aceito</span>
+                  <div class="cart-contractInfo">
+                    <a href="[A43]">
+                      <small>(Ver contrato)</small>
+                    </a>&nbsp;
 
-                  <condicao:contrato_nao_aceito>
-                    <div class="cart-contract alert alert-warning custom-paddingV3 custom-paddingH3">
-                      <span onclick="[A43]"></span>&nbsp;<span>É necessário aceitar o contrato para comprar.</span>
-                      <div class="cart-contractInfo">
-                        <a href="[A43]"><small>(Ver contrato)</small></a>
-                      </div>
-                    </div>
-                  </condicao:contrato_nao_aceito>
-                </condicao:contrato>
-        		<!-- -->
-                <condicao:customizacao_carrinho>
-                    <repeticao:customizacao_carrinho>
-                        <div class="cart-box" style="margin-top: 5px;">
-                          <p class="custom-paddingV5"><strong>Personalização do produto</strong></p>
-                          <repeticao:customizacao_campos_carrinho>
-                            <div class="cart-box">
-                              <p style="padding-left: 15px;">[AC43]: <strong>[AC41]</strong></p>
-                              <p style="padding-left: 15px;"><strong>[AC44]</strong></p>
-                            </div>
-                          </repeticao:customizacao_campos_carrinho>
-                        </div>
-                    </repeticao:customizacao_carrinho>
-                  </condicao:customizacao_carrinho>
-                <condicao:selo>
-                  <ul class="containerSelo">
-                    <repeticao:selos quantidade="1">
-                      <li class="seloBox">
-                        <img src="[A72]" alt="[A70]" />
-                        <div class="popupSelo">
-                          <p>[A70]</p>
-                          <p>[A71]</p>
-                        </div>
-                      </li>
-                    </repeticao:selos>
-                  </ul>
-                </condicao:selo>
-            </td>
-              <td class="cart-product-gift align-center"><condicao:imagem_presente>[A6]</condicao:imagem_presente></td>
-              <td class="cart-product-availbility">[A32]</td>
-              <td class="cart-product-price">[A8]</td>
-              <td class="cart-product-quantity form">
-                  [A5] <span class="cart-product-quantity-refresh sprite">Atualizar</span>
-              </td>
-              <td class="cart-product-subtotalPrice">[A9]</td>
-              <td class="cart-product-remove"><a href="[A7]" class="sprite">Remover</a></td>
-          </tr>
+                    <a href="[A44]">
+                      <small>(Cancelar)</small>
+                    </a>
 
-      <!-- KIT DE PRODUTO -->
+                  </div>
+                </div>
+              </condicao:contrato_aceito>
+
+              <condicao:contrato_nao_aceito>
+                <div class="cart-contract alert alert-warning custom-paddingV3 custom-paddingH3">
+                  <span onclick="[A43]"></span>&nbsp;
+                  <span>É necessário aceitar o contrato para comprar.</span>
+                  <div class="cart-contractInfo">
+                    <a href="[A43]">
+                      <small>(Ver contrato)</small>
+                    </a>
+                  </div>
+                </div>
+              </condicao:contrato_nao_aceito>
+            </condicao:contrato>
+            <!-- -->
+            <condicao:customizacao_carrinho>
+              <repeticao:customizacao_carrinho>
+                <div class="cart-box" style="margin-top: 5px;">
+                  <p class="custom-paddingV5">
+                    <strong>Personalização do produto</strong>
+                  </p>
+                  <repeticao:customizacao_campos_carrinho>
+                    <div class="cart-box">
+                      <p style="padding-left: 15px;">[AC43]:
+                        <strong>[AC41]</strong>
+                      </p>
+                      <p style="padding-left: 15px;"><strong>[AC44]</strong></p>
+                    </div>
+                  </repeticao:customizacao_campos_carrinho>
+                </div>
+              </repeticao:customizacao_carrinho>
+            </condicao:customizacao_carrinho>
+            <condicao:selo>
+              <ul class="containerSelo">
+                <repeticao:selos quantidade="1">
+                  <li class="seloBox">
+                    <img src="[A72]" alt="[A70]" />
+                    <div class="popupSelo">
+                      <p>[A70]</p>
+                      <p>[A71]</p>
+                    </div>
+                  </li>
+                </repeticao:selos>
+              </ul>
+            </condicao:selo>
+          </td>
+
+          <td>
+            <condicao:imagem_presente>[A6]</condicao:imagem_presente>
+          </td>
+
+          <td>
+            [A32]
+          </td>
+
+          <td>
+            [A8]
+          </td>
+
+          <td class="table__quantidade">
+            [A5]
+            <span class="">
+
+            </span>
+          </td>
+
+          <td>
+            [A9]
+            <a href="[A7]">X</a>
+          </td>
+
+        </tr>
+
+        <!-- KIT DE PRODUTO -->
 
         <condicao:kit>
-          <tr class="kit table-item">
-            <th colspan="8">
+          <tr>
+            <th>
               <div class="heading-tertiary">
                 <h2>Itens que compõem o KIT:</h2>
               </div>
             </th>
           </tr>
-          <tr class="kit table-item">
-            <td colspan="8">
+          <tr>
+            <td>
               <div class="container_kits">
                 <repeticao:kit_itens>
                   <a href="[A59]" class="box_kits" tareget="_blank">
@@ -116,164 +147,65 @@
 
       </repeticao:produtos>
 
-      <tr class="cart-subtotal">
-        <th colspan="6">Subtotal:</th>
-        <td colspan="2">
-          [A23]
-        </td>
-      </tr>
-
-      <tr class="cart-shipping">
-        <th colspan="6">
-          <p>Os métodos de entrega PAC e SEDEX sao validos apenas para Pessoa Física - CPF, enquanto os métodos FRETE CIF são validos apenas para Pessoa Jurídica - CNPJ</p>
-            <h4>Calcular o Frete <a href="javascript:callSearchZipCode('carttxtCep')">Não sei o CEP</a></h4>
-            <span class="cart-shipping-input form">[A14]</span> <a href="[A15]" class="bt-small-primary cart-shipping-bt">Calcular</a>
-        </th>
-        <td colspan="2">
-          [A16]
-        </td>
-      </tr>
-      <condicao:frete_calculado>
-        <tr>
-          <td colspan="8">
-            <table class="cart-shipping-methods" cellpadding="0" cellspacing="0" border="0" width="97%" align="center">
-              <repeticao:frete>
-                <tr class=" ft_retirar ">
-                  <td class="align-left" style="border-left: 1px solid #EAEAEA"><strong>[A18]</strong></td>
-                  <td class="align-center"><strong>Prazo:</strong> [A19]</td>
-                  <td class="align-center"><strong>Valor:</strong> [A20]</td>
-                  <td class="align-right" style="border-right: 1px solid #EAEAEA">[A17]</td>
-                </tr>
-              </repeticao:frete>
-
-
-
-              <!--
-<script type="text/javascript">
-
-	function myFrete() {
-  		$(".ft_retirar ").each(function(i){
-        	$(this).addClass("ft_frete-"+i)
-        });
-  		location.reload();
-    }
-
-    $(".ft_retirar ").each(function(i){
-        	$(this).addClass("ft_freter-"+i)
-    });
-  	function myFunction() {
-  		location.reload();
-  	}
-</script>      -->
-            </table>
-          </td>
-        </tr>
-      </condicao:frete_calculado>
-
-      <tr class="cart-coupom">
-        <th colspan="6">
-            <h4>Cupom de Desconto</h4>
-            <span class="cart-coupom-input form">
-              [A10]
-            </span>
-            <a href="[A11]" class="bt-small-primary cart-coupom-bt">Calcular</a>
-        </th>
-        <td colspan="2">
-          <condicao:cupom_valor>
-             - [A12]
-          </condicao:cupom_valor>
-        </td>
-      </tr>
-
-      <!--  TOTAL  -->
-      <tr class="cart-total">
-        <th colspan="6">
-              Total<small>da compra</small>
-        </th>
-        <td colspan="2">
-          [A21]
-        </td>
-      </tr>
     </tbody>
   </table>
+</section>
+
+<section class="carrinho__subtotal">
+  <p>
+    <span>Subtotal: </span>
+    [A23]
+  </p>
+</section>
+
+<section class="carrinho-frete">
+
+  <div class="carrinho-frete__form">
+    <p>Calcule o frete e o prazo de entrega:</p>
+    <div>
+      [A14]
+    </div>
+    <a class="frete-btn" onclick="[A15]" title="Calcular frete">ok</a>
+  </div>
+
+  <div>
+    [A16]
+  </div>
+</section>
+
+<section class="frete-result">
+  <condicao:frete_calculado>
+    <repeticao:frete>
+      <div class="frete-result__single">
+        <div>
+          [A18]
+        </div>
+        <div>
+          Prazo: [A19]
+        </div>
+        <div>
+          Valor: [A20]
+        </div>
+        <div class="frete-result__check">
+          [A17]
+        </div>
+      </div>
+    </repeticao:frete>
+  </condicao:frete_calculado>
+</section>
+
+<section class="frete-cupom">
+  <div class="frete-cupom__form">
+    <p>Cupom de desconto: [A10]</p>
+    <a class="frete-btn" onclick="[A11]" title="Calcular Cupom">Calcular</a>
+  </div>
+  <div class="frete-cupom__total">
+    Total: [A21]
+  </div>
+</section>
+<div class="error">[A28][A29][A41][A42][A45][A66]</div>
+
+<div class="carrinho-links">
+  <a href="[A0]">Continuar Comprando</a>
+  <a href="[A2]">Concluir Compra</a>
 </div>
-
-
-<div class="cart-links align-right">
-  <a href="[A0]" class="bt-big-secundary bt-buyMore">Continuar Comprando</a>
-  <a href="[A2]" class="bt-big-special bt-goToCheckout">Concluir Compra</a>
-  <a href="javascript:void(0);" class="bt-big-special bt-goToCheckout btFakeCart" style="display:none;">Concluir Compra</a>
-</div>
-TESTE
-/* Kits */
-
-.kit th, .kit td{
-    background: #f0f9ff;
-}
-
-.kit th h2{
-    text-align: left;
-    padding: 10px 10px 10px 55px;
-    text-transform: uppercase;
-    font-size: 13px;
-    font-weight: bold;
-    background: url('../imagens/bullet_seta_kit.png') no-repeat 25px 3px scroll transparent;
-    color: #052547;
-}
-
-.kit td{
-    width: 100%;
-}
-
-.container_kits{
-    padding: 0 20px;
-    overflow: hidden;
-    height: 100%;
-    display: block;
-}
-
-.container_kits *{
-   vertical-align: middle;
-}
-
-.box_kits{
-   width: 415px;
-   display: block;
-   float: left;
-   padding: 10px 0 30px 50px;
-}
-
-.box_kits .img_kit{
-    display: block;
-    float: left;
-    width: 100px;
-    height: 100px;
-    padding: 5px;
-    border: 1px solid #c2c4c5;
-    background: #fff;
-}
-
-.box_kits .info_produto_kit{
-    width: 63%;
-    display: block;
-    float: left;
-    padding: 30px 0 0;
-}
-
-.box_kits .info_produto_kit h5{
-    display: block;
-    color: #052547;
-    font-size: 12px;
-    font-weight: normal;
-    text-align: left;
-    padding-left: 10px;
-}
-
-.box_kits .info_produto_kit h6{
-    color: #848484;
-    font-size: 12px;
-    display: block;
-    font-weight: normal;
-    text-align: left;
-    padding: 3px 0 0 10px;
-}
