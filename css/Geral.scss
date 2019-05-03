@@ -934,6 +934,15 @@ ul {
 /*Banners*/
 
 .banner {
+
+  .owl-carousel {
+    .owl-item {
+      @media (max-width: $break-md) {
+        height: auto;
+      }
+    }
+  }
+
   img {
     height: auto;
     width: 100%;
