@@ -1,29 +1,42 @@
 @import 'variables';
 
 .footer {
+  padding-bottom: 38px;
+  padding-top: 40px;
+  border-top: solid 1px $yellow;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin: auto;
-  padding-bottom: 223px;
-  padding-top: 70px;
-  width: $site-size;
+  grid-template-columns: auto;
+
+  @media (min-width: $break-sm) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $break-md) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 
   &__title {
     color: $yellow;
     font-family: $font-stencil;
     font-weight: bold;
     text-transform: uppercase;
-    @include font-size(36);
+    @include font-size(18);
   }
 
   &__institucional {
+    margin-bottom: 50px;
+
+    @media (min-width: $break-sm) {
+      margin-bottom: 0;
+    }
+
     a {
       color: white;
       display: block;
       font-family: 'din';
       font-weight: 300;
       text-transform: capitalize;
-      @include font-size(26);
+      @include font-size(13);
     }
   }
 
@@ -34,39 +47,45 @@
       font-style: italic;
       font-weight: 300;
       margin-bottom: 10px;
-      @include font-size(28);
+      @include font-size(14);
     }
 
     .entregas {
-      margin-bottom: 90px;
-      margin-top: 85px;
+      margin-bottom: 45px;
+      margin-top: 43px;
+
+      img {
+        max-width: 230px;
+        width: 100%;
+      }
     }
   }
 
   &__info {
-    text-align: right;
+    margin-top: 50px;
+
+    @media (min-width: $break-md) {
+      text-align: right;
+      margin-top: 0;
+    }
 
     img {
-      max-width: 300px;
+      max-width: 170px;
 
     }
   }
 
   &-news {
-    margin-bottom: 88px;
-    margin-top: 92px;
+    margin-bottom: 46px;
+    margin-top: 50px;
 
     &__form {
       display: grid;
-      grid-column-gap: 23px;
-      grid-template-columns: -webkit-max-content -webkit-max-content -webkit-min-content;
-      grid-template-columns: -webkit-max-content -webkit-min-content;
-      grid-template-columns: max-content min-content;
+      grid-column-gap: 10px;
+      grid-template-columns: auto auto auto;
     }
 
     &__input {
-      max-width: 240px;
-
       input {
         background: transparent;
         border-color: white;
@@ -74,9 +93,10 @@
         box-sizing: border-box;
         color: white;
         font-family: 'din';
-        padding: 15px 15px;
+        padding: 12px 15px;
         width: 100%;
-        @include font-size(29);
+        max-width: 140px;
+        @include font-size(15);
 
         &::-webkit-input-placeholder {
           color: white;
@@ -111,7 +131,7 @@
       font-family: 'din';
       font-weight: 500;
       padding: 12px 15px;
-      @include font-size(29);
+      @include font-size(15);
     }
   }
 
@@ -119,7 +139,7 @@
     color: white;
     font-family: 'din';
     font-weight: 300;
-    @include font-size(26);
+    @include font-size(13);
   }
 }
 
@@ -129,22 +149,17 @@
   padding-top: 70px;
 
   &__wrapper {
-    display: grid;
-    grid-template-columns: 1fr -webkit-min-content;
-    grid-template-columns: 1fr min-content;
-    margin: auto;
-    width: $site-size;
+    @media (min-width: $break-sm) {
+      display: grid;
+      grid-template-columns: 1fr min-content;
+    }
 
     p {
       color: white;
       font-family: 'din';
       font-weight: 300;
-      padding-right: 160px;
-      @include font-size(25);
-    }
-
-    a {
-      margin-top: 60px;
+      padding-right: 88px;
+      @include font-size(16);
     }
   }
 }
