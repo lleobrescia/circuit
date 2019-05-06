@@ -1,16 +1,34 @@
 <nav class="nav-primary dept-menu">
-  	<ul>
-  		<repeticao:pais>
-          	<li>
-              	<h3 class="nav-primary-heading-primary"><a href="[A0]">[A1]</a></h3>
-                <condicao:filho>
-                    <ul>
-                        <repeticao:filhos>
-                            <li><a href="[A0]"><span class="nav-primary-bullet">•</span> [A1]</a></li>
-                        </repeticao:filhos>
-                    </ul>
-                </condicao:filho>
-            </li>
-      	</repeticao:pais>
-  	</ul>
+  <ul>
+    <repeticao:pais>
+      <li>
+        <h3 class="general-title">
+          <span>
+            <a href="[A0]">[A1]</a>
+          </span>
+          <hr>
+        </h3>
+        <condicao:filho>
+          <ul>
+            <repeticao:filhos>
+              <li>
+                <a href="[A0]"> [A1]</a>
+
+                <condicao:neto>
+                  <ul>
+                    <repeticao:netos>
+                      <li>
+                        <a href="[A0]"> [A1]</a>
+                      </li>
+                    </repeticao:netos>
+                  </ul>
+                </condicao:neto>
+
+              </li>
+            </repeticao:filhos>
+          </ul>
+        </condicao:filho>
+      </li>
+    </repeticao:pais>
+  </ul>
 </nav>
