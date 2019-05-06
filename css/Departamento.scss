@@ -1,0 +1,9 @@
+.departamentos {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 60px;
+
+  &__filtro {
+    max-width: 330px;
+  }
+}
