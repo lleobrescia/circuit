@@ -1,40 +1,33 @@
 @{
-  foreach(var FilterType in Model.FilterTypes){
-  <!-- Criado um foreach em RAZOR para repetir todos os tipos de filtros cadastrados no manager da loja-->
-  <select name="filter" class="filterMeasures">
-    <!-- Criamos dentro do loop de repetição um campo do tipo select para que seja possível selecionar o tipo de filtro que desejamos -->
-    <option value="">@FilterType.Name</option>
-    <!-- Os options são populados buscanda a informação na Model de FilterTypes, para trazer como primeira opção o nome do tipo de filtro -->
-    @foreach(var Filter in FilterType.Filters){
-    <!-- Criamos um novo foreach (loop) para trazer os filtros cadastrados para cada 'tipo' de filtro -->
-    <option value="@Filter.Id">@Filter.Name</option>
-    <!-- Esse option é populado com o ID e NAME do filtro para que consigamos montar a URL que irá gerar a busca com os termos escolhido nesse filtro -->
+foreach(var FilterType in Model.FilterTypes){
+<!-- Criado um foreach em RAZOR para repetir todos os tipos de filtros cadastrados no manager da loja-->
+<select name="filter" class="filterMeasures">
+  <!-- Criamos dentro do loop de repetição um campo do tipo select para que seja possível selecionar o tipo de filtro que desejamos -->
+  <option value="">@FilterType.Name</option>
+  <!-- Os options são populados buscanda a informação na Model de FilterTypes, para trazer como primeira opção o nome do tipo de filtro -->
+  @foreach(var Filter in FilterType.Filters){
+  <!-- Criamos um novo foreach (loop) para trazer os filtros cadastrados para cada 'tipo' de filtro -->
+  <option value="@Filter.Id">@Filter.Name</option>
+  <!-- Esse option é populado com o ID e NAME do filtro para que consigamos montar a URL que irá gerar a busca com os termos escolhido nesse filtro -->
   }
-  </select>
-  }
-  <a href="javascript:void(0);" class="btnFilterType">Buscar</a>
-  <!-- Botão responsável por montar a URL que irá realizar a busca na loja utilizando os termos selecionados no filtro feito acima -->
-  }
+</select>
+}
+<a href="javascript:void(0);" class="filtro__btn filtro__btn--trigger">Buscar</a>
+<!-- Botão responsável por montar a URL que irá realizar a busca na loja utilizando os termos selecionados no filtro feito acima -->
+}
 
-  <script>
-     // O código abaixo monta um script que ao clicar no botão com a classe 'btnFilterType' irá buscar os valores dos campos options no select de filtro e adicionar seu valor na URL, separando pelo caracter '!', esse é o padrão que a loja entende uma busca com filtro, não deve ser alterado.
-     $('.btnFilterType').click(function(){
-       var filterArray = new Array();
-       $("[name='filter']").each(function(){
-         if($(this).val() != ""){
-           filterArray.push($(this).val());
-         }
-       });
-    window.location = 'http://www.circuit.com.br/resultadopesquisa?pag=1&filtros='+filterArray.join("|");
-     })
-
-
-
-
-
-
-    $(".filterMeasures ").each(function(i){
-            $(this).addClass("ft-"+i)
-         });
-
-  </script>
+<script>
+  // O código abaixo monta um script que ao clicar no botão com a classe 'filtro__btn--trigger' irá buscar os valores dos campos options no select de filtro e adicionar seu valor na URL, separando pelo caracter '!', esse é o padrão que a loja entende uma busca com filtro, não deve ser alterado.
+  $('.filtro__btn--trigger').click(function () {
+    var filterArray = new Array();
+    $("[name='filter']").each(function () {
+      if ($(this).val() != "") {
+        filterArray.push($(this).val());
+      }
+    });
+    window.location = 'http://www.circuit.com.br/resultadopesquisa?pag=1&filtros=' + filterArray.join("|");
+  })
+  $(".filterMeasures ").each(function (i) {
+    $(this).addClass("ft-" + i)
+  });
+</script>
