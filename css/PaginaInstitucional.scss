@@ -1,0 +1,42 @@
+@import 'variables';
+
+.representantes {
+  padding-bottom: 60px;
+
+  &__mapa {
+    #map {
+      width: 100%;
+      height: 820px;
+      box-shadow: -15px 15px 0px 0px $red;
+      padding-bottom: 15px;
+    }
+  }
+
+  &__info {
+    color: $black;
+  }
+
+  &__contato {
+    margin-top: 45px;
+
+    h2 {
+      font-family: "din";
+      color: white;
+      font-weight: 500;
+      text-transform: uppercase;
+      @include font-size(16);
+    }
+
+    p {
+      font-family: "din";
+      color: white;
+      @include font-size(14);
+
+      span {
+        color: $yellow;
+      }
+    }
+
+    ;
+  }
+}
