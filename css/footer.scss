@@ -32,6 +32,7 @@
 
     a {
       color: white;
+      text-transform: uppercase;
       display: block;
       font-family: 'din';
       font-weight: 300;
@@ -159,7 +160,11 @@
       font-family: 'din';
       font-weight: 300;
       padding-right: 88px;
-      @include font-size(16);
+      @include font-size(14);
+    }
+
+    img {
+      width: 100px;
     }
   }
 }
