@@ -262,4 +262,44 @@ body.menu-opened {
     vertical-align: middle;
     width: 40px;
   }
+
+  &__form {
+    display: none;
+
+    fieldset {
+      border: none;
+    }
+  }
+
+  &__label {
+    input {
+      background: transparent;
+      border: solid 1px white;
+      padding: 8px 0 8px 4px;
+      color: white;
+      display: inline-block;
+    }
+  }
+
+  &__btn {
+    background-image: url('../imagens/ic-search.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    display: inline-block;
+    height: 30px;
+    vertical-align: middle;
+    width: 40px;
+  }
+
+  &--open {
+    .top-search__icon {
+      display: none;
+    }
+
+    .top-search__form {
+      display: inline;
+    }
+  }
 }

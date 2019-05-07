@@ -17,7 +17,6 @@ $(function () {
   });
 
   $(document).on("click", ".header__toggle", function () {
-
     if ($(this).hasClass('header__toggle--open')) {
       $('body').removeClass('menu-opened');
       $(this).removeClass('header__toggle--open');
@@ -27,6 +26,10 @@ $(function () {
       $(this).addClass('header__toggle--open');
       $('.menu-top').addClass('menu-top--open');
     }
+  });
+
+  $(document).on("click", ".top-search__icon", function () {
+    $('.top-search').addClass('top-search--open');
   });
 
   $(document).on("click", ".spin-add", function () {
