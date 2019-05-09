@@ -16,30 +16,221 @@
 <script>
   // Initialize and add the map
   function initMap() {
+    var locations = [{
+        lat: -9.1162025,
+        lng: -72.5533411,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">NORTE COMERCIO REPRESENTAÇÃO</p> <p class="representantes__nome">ITAMAR</p>  <p class="representantes__tel">(69) 9200-3852</p>   <p class="representantes__email">itamar.rep@hotmail.com; norterep1@hotmail.com</p>  </div>'
+      },
+      {
+        lat: -10.8179768,
+        lng: -65.5374401,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">NORTE COMERCIO REPRESENTAÇÃO</p> <p class="representantes__nome">ITAMAR</p>  <p class="representantes__tel">(69) 9200-3852</p>   <p class="representantes__email">itamar.rep@hotmail.com; norterep1@hotmail.com</p>  </div>'
+      },
+      {
+        lat: -15.8899275,
+        lng: -54.0784483,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">GFBI REPRESENTAÇÕES</p> <p class="representantes__nome">GEISON</p>  <p class="representantes__tel">(62) 98124 - 0024</p>   <p class="representantes__email">geison@gfbirepresentacoes.com.br</p>  </div>'
+      },
+      {
+        lat: -15.7751266,
+        lng: -48.0778478,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">GFBI REPRESENTAÇÕES</p> <p class="representantes__nome">GEISON</p>  <p class="representantes__tel">(62) 98124 - 0024</p>   <p class="representantes__email">geison@gfbirepresentacoes.com.br</p>  </div>'
+      },
+      {
+        lat: -9.6539247,
+        lng: -37.8098617,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">	BARBARA MARIA DOS SANTOS</p> <p class="representantes__nome">JETRO</p>  <p class="representantes__tel">(79) 98805 - 3437</p>   <p class="representantes__email">jetrorep @gmail.com</p>  </div>'
+      },
+      {
+        lat: -10.5371025,
+        lng: -38.4442819,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">	BARBARA MARIA DOS SANTOS</p> <p class="representantes__nome">JETRO</p>  <p class="representantes__tel">(79) 98805 - 3437</p>   <p class="representantes__email">jetrorep @gmail.com</p>  </div>'
+      },
+      {
+        lat: -1.6077631,
+        lng: -54.6117015,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">M T PEREIRA COMERCIO REPRESENTAÇÕES</p> <p class="representantes__nome">MURILO - TAVORA</p>  <p class="representantes__tel">(91) 98858 - 7159</p>   <p class="representantes__email">mtp.representacoes02@gmail.com</p>  </div>'
+      },
+      {
+        lat: -3.6033268,
+        lng: -56.9823615,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">M T PEREIRA COMERCIO REPRESENTAÇÕES</p> <p class="representantes__nome">MURILO - TAVORA</p>  <p class="representantes__tel">(91) 98858 - 7159</p>   <p class="representantes__email">mtp.representacoes02@gmail.com</p>  </div>'
+      },
+      {
+        lat: -27.6307535,
+        lng: -53.3272919,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">VILAMIL REPRESENTAÇÕES LTDA</p> <p class="representantes__nome">LEONARDO - VILAMIL</p>  <p class="representantes__tel">(48) 9985 - 1273</p>   <p class="representantes__email">vilamilrepresentacao @gmail.com</p>  </div>'
+      },
+      {
+        lat: -5.7712136,
+        lng: -54.5433967,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">E F PAIVA PINTO E CIA LTDA</p> <p class="representantes__nome">ESTEVÃO</p>  <p class="representantes__tel">(91) 98238 - 1540 </p>   <p class="representantes__email">estevaocontabil3 @gmail.com</p>  </div>'
+      },
+      {
+        lat: -9.278944,
+        lng: -52.719577,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">E F PAIVA PINTO E CIA LTDA</p> <p class="representantes__nome">ESTEVÃO</p>  <p class="representantes__tel">(91) 98238 - 1540 </p>   <p class="representantes__email">estevaocontabil3 @gmail.com</p>  </div>'
+      },
+      {
+        lat: -24.5953297,
+        lng: -53.5660121,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">COSTA PIMENTEL REPRES.COMERCIAIS</p> <p class="representantes__nome">LUIZ FERNANDO</p>  <p class="representantes__tel">(41) 9661 - 2223 </p>   <p class="representantes__email">luizfernando @costapimentel.com.br</p>  </div>'
+      },
+      {
+        lat: -27.3090816,
+        lng: -52.843893,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">COSTA PIMENTEL REPRES.COMERCIAIS</p> <p class="representantes__nome">LUIZ FERNANDO</p>  <p class="representantes__tel">(41) 9661 - 2223 </p>   <p class="representantes__email">luizfernando @costapimentel.com.br</p>  </div>'
+      },
+      {
+        lat: -7.1603491,
+        lng: -37.9008528,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">	M OLIVEIRA GESTÃO EM VENDAS</p> <p class="representantes__nome">MARCIO</p>  <p class="representantes__tel">(83) 9955 - 8250 </p>   <p class="representantes__email">marciooliveirarep @gmail.com</p>  </div>'
+      },
+      {
+        lat: -6.8040948,
+        lng: -47.6831983,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">	J G REPRESENTAÇÕES LTDA</p> <p class="representantes__nome">EDIMAR</p>  <p class="representantes__tel">(85) 9994 - 0015 </p>   <p class="representantes__email">edimar @grupojg.com.br</p>  </div>'
+      },
+      {
+        lat: -5.3967423,
+        lng: -38.4232023,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">	J G REPRESENTAÇÕES LTDA</p> <p class="representantes__nome">EDIMAR</p>  <p class="representantes__tel">(85) 9994 - 0015 </p>   <p class="representantes__email">edimar @grupojg.com.br</p>  </div>'
+      },
+      {
+        lat: -18.5141953,
+        lng: -49.9502226,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">	EVANDRO DOS S ARAUJO JUNIOR</p> <p class="representantes__nome">EVANDRO</p>  <p class="representantes__tel">(12) 99623 - 2932 </p>   <p class="representantes__email">e.jrrepresenta @outlook.com</p>  </div>'
+      },
+      {
+        lat: -19.9417305,
+        lng: -44.3323917,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">	HF REPRESENTAÇÕES CONSULTORIA </p> <p class="representantes__nome">GISELE</p>  <p class="representantes__tel">(31) 98895 - 6175 </p>   <p class="representantes__email">gisele @hf5representacoes.com.br</p>  </div>'
+      },
+      {
+        lat: -12.646919,
+        lng: -60.4289886,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">	JOÃO BORGES DA SILVA FILHO ME </p> <p class="representantes__nome">JOÃO / MAYARA</p>  <p class="representantes__tel">(67) 3253 - 3630 </p>   <p class="representantes__email">pantanalrep.suporte @outlook.com</p>  </div>'
+      },
+      {
+        lat: -20.5486117,
+        lng: -59.0432405,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">	JOÃO BORGES DA SILVA FILHO ME </p> <p class="representantes__nome">JOÃO / MAYARA</p>  <p class="representantes__tel">(67) 3253 - 3630 </p>   <p class="representantes__email">pantanalrep.suporte @outlook.com</p>  </div>'
+      },
+      {
+        lat: -29.5510121,
+        lng: -54.6384666,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">	ALDO REPRESENTAÇÕES LTDA </p> <p class="representantes__nome">ALDO</p>  <p class="representantes__tel">(51) 3362 - 4907 </p>   <p class="representantes__email">aldorep @terra.com.br</p>  </div>'
+      },
+      {
+        lat: -4.0836683,
+        lng: -65.1969984,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">PEREIRA E MEDINA LTDA</p> <p class="representantes__nome">EDSON</p>  <p class="representantes__tel">(92) 9 9226 - 3203 </p>   <p class="representantes__email">emprol @uol.com.br</p>  </div>'
+      },
+      {
+        lat: 1.0988131,
+        lng: -61.4895812,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">PEREIRA E MEDINA LTDA</p> <p class="representantes__nome">EDSON</p>  <p class="representantes__tel">(92) 9 9226 - 3203 </p>   <p class="representantes__email">emprol @uol.com.br</p>  </div>'
+      },
+      {
+        lat: -13.3837623,
+        lng: -46.482426,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">FELIPE REPRESENTAÇÕES</p> <p class="representantes__nome">FELIPE</p>  <p class="representantes__tel">(71) 98717.2011 </p>   <p class="representantes__email">felipe @dogmarepresentacoes.com.br</p>  </div>'
+      },
+      {
+        lat: -13.3623854,
+        lng: -45.9111369,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">ROSEMAR REPRESENTAÇÕES</p> <p class="representantes__nome">ROSEMAR</p>  <p class="representantes__tel">(77) 99807 - 9761 </p>   <p class="representantes__email">rosemarroles @hotmail.com</p>  </div>'
+      },
+      {
+        lat: -14.4075687,
+        lng: -45.9770549,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">SENHORA SANTANA COM.REPRESENTAÇÃO</p> <p class="representantes__nome">CARLOS</p>  <p class="representantes__tel">(74) 99196 - 2867 </p>   <p class="representantes__email">senhorasantanarep @hotmail.com</p>  </div>'
+      },
+      {
+        lat: -5.3116749,
+        lng: -41.5835256,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">ALVARO MAIA REPRESENTAÇÕES LTDA</p> <p class="representantes__nome">ALVARO</p>  <p class="representantes__tel">(85) 98789 - 9799  </p>   <p class="representantes__email">alvaromaiarep @hotmail.com</p>  </div>'
+      },
+      {
+        lat: -6.6452794,
+        lng: -39.1198615,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">ANDERSON J SANTANA E CIA REPRESENTAÇÕES</p> <p class="representantes__nome">ANDERSON</p>  <p class="representantes__tel">(81) 98631 - 5274  </p>   <p class="representantes__email">andersonjsrepresentacoes @gmail.com</p>  </div>'
+      },
+      {
+        lat: -19.5346183,
+        lng: -39.8563844,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">JOVIR COMERCIO E VENDA DE PEÇAS</p> <p class="representantes__nome">VIRGILIO</p>  <p class="representantes__tel">(27) 99988 - 0213  </p>   <p class="representantes__email">jovir @uol.com.br</p>  </div>'
+      },
+      {
+        lat: -19.859721,
+        lng: -44.0478336,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">JOÃO BOSCO JUNIOR REPRESENTAÇÕES</p> <p class="representantes__nome">JOAO BOSCO</p>  <p class="representantes__tel">(31) 99828 - 5194  </p>   <p class="representantes__email">joao @jbjrepresentacoes.com.br</p>  </div>'
+      },
+      {
+        lat: -22.9132525,
+        lng: -43.7261833,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">DR BUSINESS LTDA MONTEIRO</p> <p class="representantes__nome">DR BUSINESS </p>  <p class="representantes__tel">(21) 98862 - 6492  </p>   <p class="representantes__email">repmonteiro2015 @gmail.com</p>  </div>'
+      },
+      {
+        lat: -23.6815314,
+        lng: -46.8755,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">NINO BAGGIO REPRES.COMERCIAIS LTDA</p> <p class="representantes__nome">NINO BAGGIO / MAURIA </p>  <p class="representantes__tel">(17) 99155 - 4087 </p>   <p class="representantes__email">ninobaggio @uol.com.br</p>  </div>'
+      },
+      {
+        lat: -23.5306418,
+        lng: -46.5632908,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">ZECA REPRESENTAÇÕES</p> <p class="representantes__nome">ZECA </p>  <p class="representantes__tel">(98) 9963 - 7847 </p>   <p class="representantes__email">zecamontana2013 @hotmail.com</p>  </div>'
+      },
+      {
+        lat: -5.386535,
+        lng: -47.8964285,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">ALBECI REPRESENTAÇÕES LTDA</p> <p class="representantes__nome">ALBECY </p>  <p class="representantes__tel">(99) 99122 - 2607 / 98117 - 8895 </p>   <p class="representantes__email">albecyrep @hotmail.com</p>  </div>'
+      },
+      {
+        lat: -19.5346183,
+        lng: -39.8563844,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">W D L COMERCIAL & REPRESENTAÇÕES </p> <p class="representantes__nome">WELLINGTON </p>  <p class="representantes__tel">(21) 99945 - 6136 </p>   <p class="representantes__email">wdlrepres @gmail.com</p>  </div>'
+      },
+      {
+        lat: -22.9119875,
+        lng: -43.6726249,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">W D L COMERCIAL & REPRESENTAÇÕES </p> <p class="representantes__nome">WELLINGTON </p>  <p class="representantes__tel">(21) 99945 - 6136 </p>   <p class="representantes__email">wdlrepres @gmail.com</p>  </div>'
+      },
+      {
+        lat: -18.9953223,
+        lng: -39.5048219,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">R SOARES REIS DISTRIBUIDORA</p> <p class="representantes__nome">RAFAEL </p>  <p class="representantes__tel">(27) 99864 - 6779 </p>   <p class="representantes__email">rafaelsoares39 @gmail.com</p>  </div>'
+      },
+      {
+        lat: -2.5604588,
+        lng: -44.3281633,
+        dados: '<div class="representantes__info">    <p class="representantes__empresa">RICHARDSON REPRESENTAÇÕES</p> <p class="representantes__nome">RICHARDSON </p>  <p class="representantes__tel">(98) 98108 - 8727</p>   <p class="representantes__email">richardsongomes97 @gmail.com</p>  </div>'
+      }
+    ];
     var circuit = {
-      lat: -22.975964,
-      lng: -45.470778
+      lat: -9.1162025,
+      lng: -72.5533411
     };
-    // The map, centered at circuit
     var map = new google.maps.Map(
       document.getElementById('map'), {
-        zoom: 5,
-        center: circuit
+        zoom: 4,
+        center: new google.maps.LatLng(-13.6561589, -69.7309264)
       });
-    var contentString =
-      '<div class="representantes__info">  Minas Gerais>Triângulo mineiro <br>    GFBI Representações LTDA-ME<br>  Contato: Geison Lima Fernandes  <br>Telefone: (62) 3274-4590 / (62) 98124-0024 <br> email: geison@geison.com.br</div>';
-    var infowindow = new google.maps.InfoWindow({
-      content: contentString
-    });
-    // The marker, positioned at circuit
-    var marker = new google.maps.Marker({
-      position: circuit,
-      map: map,
-      title: 'GFBI Representações LTDA-ME'
-    });
-    marker.addListener('click', function () {
-      infowindow.open(map, marker);
-    });
+    var infowindow = new google.maps.InfoWindow();
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i].lat, locations[i].lng),
+        map: map
+      });
+      google.maps.event.addListener(marker, 'click', (function (marker, i) {
+        return function () {
+          infowindow.setContent(locations[i].dados);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
   }
 </script>
 <script async defer
