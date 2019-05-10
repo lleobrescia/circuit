@@ -1,6 +1,8 @@
 @import 'variables';
 
 .carrinho {
+  color: $black;
+
   .table {
     &__produto {
       display: flex;
@@ -58,9 +60,11 @@
     font-style: italic;
     font-weight: 300;
     @include font-size(14);
+    color: $black;
 
     p {
       margin-right: 6px;
+      color: $black;
     }
 
     input {
@@ -72,6 +76,7 @@
       width: 100%;
       @include font-size(14);
       border-color: black;
+      color: $black;
     }
 
     &__form {
@@ -91,6 +96,7 @@
     -webkit-overflow-scrolling: touch;
     overflow-x: auto;
     width: 100%;
+    color: $black;
 
     &__single {
       display: grid;
@@ -117,6 +123,7 @@
 
       p {
         margin-right: 10px;
+        color: white;
       }
 
       input {
