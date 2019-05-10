@@ -614,7 +614,7 @@ ul {
     }
   }
 
-  &__grid {
+  &__grid .galeria{
 
     @media (min-width: $break-sm) {
       display: grid;

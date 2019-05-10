@@ -36,46 +36,48 @@
     <header id="header">
       <componente name="cial:header" id="inlcude_header" />
     </header>
-    <div id="content" class="container bg-barro">
-      <div class="bread-crumb">
-        <componente name="ciac:produtobarranavegacao" id="breadCrumb" />
-      </div>
-      <div class="product-top">
-        <div class="product-top-left to-left w-42">
-          <componente name="ciac:imagensproduto" id="product_images" />
-          <!-- <componente name="ciac:scriptrazor" id="product_share" /> -->
+    <div class="bg-barro">
+      <div id="content" class="container">
+        <div class="bread-crumb">
+          <componente name="ciac:produtobarranavegacao" id="breadCrumb" />
         </div>
-        <div class="product-top-left to-right w-55">
-          <componente name="ciac:produtonome" id="product_name" />
-          <componente name="ciac:scriptrazor" id="product_rateTrustvox" />
-          <componente name="ciac:selosproduto" id="product_promotions" />
-          <componente name="ciac:precoproduto" id="product_price" />
-          <componente name="ciac:variantesproduto" id="product_variants" />
-          <componente name="ciac:listapresentesadicionarproduto" id="adicionarProdutoLista" />
-          <componente name="ciac:scriptrazor" id="anchor_trustvox" />
-          <componente name="ciapkg:produtocustomizado" id="product_customization" />
-          <componente name="ciac:simularfreteproduto" id="product_shipping_simulate" />
-        </div>
-      </div>
-      <div class="product-bottom">
-        <componente name="ciac:produtodescricoes" id="product_descriptions" />
-        <componente name="ciac:comprejunto" id="product_bundles" />
-        <componente name="ciac:produtosrelacionados" id="product_relatedProducts" />
-        <componente name="ciac:scriptrazor" id="app_trustvox" />
-
-        <div class="product-coments-rate">
-          <h2 class="general-title">
-            <span>Avaliações</span>
-            <hr>
-          </h2>
-          <div class="product-rate">
-            <div class="product-rate__msg">
-              Escreva sua avaliação
-            </div>
-            <componente name="ciac:produtoavaliar" id="product_rate" />
+        <div class="product-top">
+          <div class="product-top-left to-left w-42">
+            <componente name="ciac:imagensproduto" id="product_images" />
+            <!-- <componente name="ciac:scriptrazor" id="product_share" /> -->
           </div>
-          <div class="product-coments to-right w-50">
-            <componente name="ciac:produtocomentario" id="product_coments" />
+          <div class="product-top-left to-right w-55">
+            <componente name="ciac:produtonome" id="product_name" />
+            <componente name="ciac:scriptrazor" id="product_rateTrustvox" />
+            <componente name="ciac:selosproduto" id="product_promotions" />
+            <componente name="ciac:precoproduto" id="product_price" />
+            <componente name="ciac:variantesproduto" id="product_variants" />
+            <componente name="ciac:listapresentesadicionarproduto" id="adicionarProdutoLista" />
+            <componente name="ciac:scriptrazor" id="anchor_trustvox" />
+            <componente name="ciapkg:produtocustomizado" id="product_customization" />
+            <componente name="ciac:simularfreteproduto" id="product_shipping_simulate" />
+          </div>
+        </div>
+        <div class="product-bottom">
+          <componente name="ciac:produtodescricoes" id="product_descriptions" />
+          <componente name="ciac:comprejunto" id="product_bundles" />
+          <componente name="ciac:produtosrelacionados" id="product_relatedProducts" />
+          <componente name="ciac:scriptrazor" id="app_trustvox" />
+
+          <div class="product-coments-rate">
+            <h2 class="general-title">
+              <span>Avaliações</span>
+              <hr>
+            </h2>
+            <div class="product-rate">
+              <div class="product-rate__msg">
+                Escreva sua avaliação
+              </div>
+              <componente name="ciac:produtoavaliar" id="product_rate" />
+            </div>
+            <div class="product-coments to-right w-50">
+              <componente name="ciac:produtocomentario" id="product_coments" />
+            </div>
           </div>
         </div>
       </div>

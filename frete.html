@@ -1,0 +1,53 @@
+<div class="product-shipping">
+    <h4> Calcular o Frete <a href="javascript:callSearchZipCode('Simular_Frete_txtCepFrete')">Não sei o CEP</a></h4>
+    <strong>Qtd:</strong>
+    <span class="form product-shipping-qtd">[A0]</span>
+<br />
+    <strong>CEP:</strong>
+    <span class="form product-shipping-form">[A1]</span>
+  <p style="font-size: 12px;    margin: 10px 0;    color: red;">Os métodos de entrega PAC e SEDEX sao validos apenas para Pessoa Física - CPF, enquanto os métodos FRETE CIF são validos apenas para Pessoa Jurídica - CNPJ</p>
+    <a href="[A2]" class="bt-small-secundary product-shipping-bt" onclick="mySimulafe()">Simular Frete</a>
+  <script type="text/javascript">
+
+	function mySimulafe() {
+  		$(".ft_retirar ").each(function(i){
+        	$(this).addClass("ft_frete-"+i)
+        });
+    }
+</script>
+</div>
+<condicao:exibicao_das_transportadoras>
+<table cellpadding="0" cellspacing="0" border="0" class="product-shipping-methods">
+        <thead>
+            <tr>
+                <th>Transportadora</th>
+                <th>Prazo</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <script type="text/javascript">
+  		$(".rsrsrs").each(function(i){
+        	$(this).addClass("rsrsrs-"+i)
+        });
+
+</script>
+            <repeticao:frete>
+            <tr class="rsrsrs">
+                <td>[A3]</td>
+                <td>[A4]</td>
+                <td><del>[A6]</del>[A5]</td>
+            </tr>
+        </repeticao:frete>
+    </tbody>
+</table>
+</condicao:exibicao_das_transportadoras>
+<condicao:sem_transportadoras>
+<table cellpadding="0" cellspacing="0" border="0" class="product-shipping-methods">
+  <thead>
+    <tr>
+    	<th>Nenhuma transportadora para este CEP.</th>
+    </tr>
+  </thead>
+</table>
+</condicao:sem_transportadoras>

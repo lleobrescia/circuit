@@ -32,11 +32,10 @@
 
     a {
       color: white;
-      text-transform: uppercase;
+      text-transform: uppercase ;
       display: block;
       font-family: 'din';
       font-weight: 300;
-      text-transform: capitalize;
       @include font-size(13);
     }
   }
