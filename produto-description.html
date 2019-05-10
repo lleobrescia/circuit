@@ -1,0 +1,27 @@
+<div class="product-descriptions">
+    <ul class="product-descriptions-titles">
+        <repeticao:abas>
+           <li data-tab="[A0]"><span>[A1]</span></li>
+        </repeticao:abas>
+    </ul>
+    <div class="product-description" itemprop="description">
+        <repeticao:conteudo>
+            <div data-tab-content="[A0]" class="product-descriptions-content">
+                <p>[A2]</p>
+            </div>
+        </repeticao:conteudo>
+    </div>
+</div>
+
+<script>
+$(function(){
+	$(".product-descriptions-content:first").addClass("active");
+	$(".product-descriptions-titles li:first").addClass("active");
+  	$(".product-descriptions-titles li").click(function(){
+  		$(".product-descriptions-titles li").removeClass("active");
+  		$(".product-descriptions-content").removeClass("active");
+  		$(this).addClass("active");
+  		$("[data-tab-content='"+$(this).attr("data-tab")+"']").addClass("active");
+  	});
+});
+</script>
