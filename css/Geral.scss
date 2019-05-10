@@ -287,6 +287,15 @@ ul {
 
 }
 
+.banner-interno {
+  width: 100%;
+  background-image: url('../imagens/banner-interno.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 257px;
+  background-position: center;
+}
+
 
 .ft-0 {
   display: none !important;
@@ -614,7 +623,7 @@ ul {
     }
   }
 
-  &__grid .galeria{
+  &__grid .galeria {
 
     @media (min-width: $break-sm) {
       display: grid;
@@ -1304,6 +1313,11 @@ ul {
 .collection-bottom {
   display: flex;
   justify-content: center;
+}
+
+.prev-page,
+.next-page {
+  display: none !important;
 }
 
 .collection-pagination {
