@@ -1,0 +1,196 @@
+<!-- Caso a loja não tenha a funcionalidade Retirada na Loja -->
+<condicao:sem_retirada_loja>
+
+  <div id="simulador_frete">
+    <div class="simular_frete selectShippingMethod">
+      <a href="javascript:void(0);" onclick="showTransportadora()" id="btnTransp" class="btnShowMethod active">Calcular Frete</a>
+
+      <!-- Box transportadoras -->
+      <ul class="hide boxTransportadoras active" id="pnlTransp">
+        <fieldset class="main-border">
+          <label class="qtd" style="display:none;">
+            <span>Qtd:</span>[A0]
+          </label>
+          <label>
+            [A1]
+          </label>
+          <label class="simular_bt">
+            <a href="[A2]" class="bt-big-secundary">OK</a>
+            <a href="javascript:callSearchZipCode('Simular_Frete_txtCepFrete')">Não sei o CEP</a>
+          </label>
+        </fieldset>
+<!-- Resulta da busca por Transportadoras -->
+        <condicao:exibicao_das_transportadoras>
+          <div class="simular_frete_resultado">
+            <table cellpadding="0" cellspacing="0" border="0">
+              <thead>
+                <tr>
+                  <th class="table-heading">Transportadora</th>
+                  <th class="table-heading">Prazo</th>
+                  <th class="table-heading">Valor</th>
+                </tr>
+              </thead>
+              <tbody>
+                <repeticao:frete>
+                  <tr>
+                    <td>[A3]</td>
+                    <td>[A4]</td>
+                    <td>[A5]</td>
+                  </tr>
+                </repeticao:frete>
+              </tbody>
+            </table>
+          </div>
+        </condicao:exibicao_das_transportadoras>
+        <condicao:sem_transportadoras>
+          <div class="simular_frete_resultado">
+            <table cellpadding="0" cellspacing="0" border="0">
+              <thead>
+                <tr>
+                  <th>Ainda não estamos entregando na sua região.</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </condicao:sem_transportadoras>
+      </ul>
+
+    </div>
+  </div>
+
+</condicao:sem_retirada_loja>
+
+<!-- INÍCIO MÓDULO DE RETIRADA NA LOJA -->
+<condicao:retirada_loja>
+
+  <div id="simulador_frete">
+    <div class="simular_frete selectShippingMethod">
+      <a href="javascript:void(0);" onclick="showTransportadora()" id="btnTransp" class="btnShowMethod active">Calcular Frete</a>
+      <a href="javascript:void(0);showRetiradaNaLoja()" id="btnRetiradaNaLoja" class="btnShowMethod">Retirar em loja próxima</a>
+      <!-- Box transportadoras -->
+      <ul class="hide boxTransportadoras active" id="pnlTransp">
+        <fieldset class="main-border">
+          <label class="qtd" style="display:none;">
+            <span>Qtd:</span>[A0]
+          </label>
+		  <i class="fas fa-truck"></i>
+          <label class="informarCep">
+            [A1]
+          </label>
+          <label class="simular_bt">
+            <a href="[A2]" class="bt-big-secundary">OK</a>
+            <div class="forget-cep"><a href="javascript:callSearchZipCode('Simular_Frete_txtCepFrete')">Não sei o CEP</a></div>
+          </label>
+        </fieldset>
+ <!-- Resulta da busca por Transportadoras -->
+        <condicao:exibicao_das_transportadoras>
+          <div class="simular_frete_resultado">
+            <table cellpadding="0" cellspacing="0" border="0">
+              <thead>
+                <tr>
+                  <th class="table-heading">Transportadora</th>
+                  <th class="table-heading">Prazo</th>
+                  <th class="table-heading">Valor</th>
+                </tr>
+              </thead>
+              <tbody>
+                <repeticao:frete>
+                  <tr>
+                    <td>[A3]</td>
+                    <td>[A4]</td>
+                    <td>[A5]</td>
+                  </tr>
+                </repeticao:frete>
+              </tbody>
+            </table>
+          </div>
+        </condicao:exibicao_das_transportadoras>
+        <condicao:sem_transportadoras>
+          <div class="simular_frete_resultado">
+            <table cellpadding="0" cellspacing="0" border="0">
+              <thead>
+                <tr>
+                  <th>Ainda não estamos entregando na sua região.</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </condicao:sem_transportadoras>
+      </ul>
+      <!-- Box retirada na loja -->
+      <ul class="hide boxRetiradaNaLoja" id="pnlRetiradaNaLoja">
+        <div id="pickupContent">
+          <div id="ctlrPnb" ng-controller="placesNearbyController" ng-init="placesNearby.pageLimit=15">
+            <fieldset class="main-border">
+              <label class="titulo-simular">
+                 <span>Encontrar lojas próxima do CEP: </span>
+              </label>
+              <label class="qtd" style="display:none;">
+                <span>Qtd:</span>
+                <input type="tel" id="quantidade_cotacao" name="quantidade_cotacao" ng-model="placesNearby.shipQuantity" ng-value="placesNearby.shipQuantity" maxlenght="3" ng-change="placesNearby.changeZipCode()" ng-keydown="placesNearby.triggerEvent($event);" value="1" placeholder="1" />
+              </label>
+			  <i class="fas fa-store-alt"></i>
+              <label class="informarCep">
+                <input type="text" id="txtCepFrete_retirada" name="txtCepFrete_retirada" ng-keydown="placesNearby.triggerEvent($event);" ng-model="placesNearby.shipToZipCode" ng-value="placesNearby.shipToZipCode" maxlenght="12" ng-change="placesNearby.changeZipCode()" class=" cep" />
+              </label>
+              <label class="simular_bt">
+                <a href="javascript:void(0);" ng-click="placesNearby()" class="bt-big-secundary">OK</a>
+                <div class="forget-cep"><a href="javascript:callSearchZipCode('Simular_Frete_txtCepFrete')">Não sei o CEP</a></div>
+              </label>
+            </fieldset>
+            <div ng-show="placesNearby.StoresPickup.SearchLoadStorePickups" class="loaderPickup">
+              <img src="imagens/loadingtop.gif" />
+            </div>
+            <div class="not-storePickup ng-hide" ng-show="placesNearby.StoresPickup.StoresPickups.length == 0">
+              <a href="" class="show-pickups bt-carrinho btn-primary errorPickup">Infelizmente ainda não temos uma loja perto de você</a>
+            </div>
+            <div class="storeSelectedCart ng-hide" ng-show="placesNearby.StoresPickup.FinishedLoadStorePickups">
+              <li ng-repeat="store in placesNearby.StoresPickup.StoresPickups | orderBy: '-state'">
+                <label>
+                   <strong><span ng-if="store.state">{{store.state}}</span> | {{store.city}} </strong>
+                  <div class="addressResum">
+                    <p class="addressInfo">{{store.street}}, {{store.streetNumber}}, {{store.city}} | {{store.zipCode}}</p>
+                    <p ng-if="store.hasAvailability == true && store.daysToPickup == 1" class="products-availability">Produtos disponíveis em {{store.daysToPickup}} dia útil</p>
+                    <p ng-if="store.hasAvailability == true && store.daysToPickup > 1" class="products-availability">Produtos disponíveis em {{store.daysToPickup}} dias úteis</p>
+                    <p ng-if="store.hasAvailability == false" class="products-unavailability">Produtos Indisponíveis</p>
+                    <a href="https://maps.google.com.br/maps?q={{store.street}},+{{store.streetNumber}},+{{store.city}}+{{store.zipCode}}" class="map-link" id="idmap_link" target="_blank"><i class="fa fa-map-marker"></i> Ver mapa</a>
+                    <!--iframe width="100%" height="100%" frameborder="0" scrolling="yes" allowtransparency="true" src="https://maps.google.com.br/maps?q={{store.street}},+{{store.streetNumber}},+{{store.city}}+{{store.zipCode}}"></iframe-->
+                  </div>
+                </label>
+              </li>
+            </div>
+            <span ng-show="placesNearby.StoresPickup.FinishedLoadStorePickups" class="qtdStores ng-hide">{{placesNearby.StoresPickup.Count}} lojas encontradas</span>
+          </div>
+        </div>
+      </ul>
+    </div>
+  </div>
+
+
+
+</condicao:retirada_loja>
+
+
+
+
+<!-- Script para abas -->
+
+<script type="text/javascript">
+  $('.informarCep input').attr('placeholder','Digite o CEP')
+  function showTransportadora(){
+  $('#btnRetiradaNaLoja').removeClass('active');$('#pnlRetiradaNaLoja').removeClass('active');
+  $('#btnTransp').addClass('active');$('#pnlTransp').addClass('active');
+  $('.informarCep input').attr('placeholder','Digite o CEP')
+  }
+  function showRetiradaNaLoja(){
+  $('#btnTransp').removeClass('active');$('#pnlTransp').removeClass('active');
+  $('#btnRetiradaNaLoja').addClass('active');$('#pnlRetiradaNaLoja').addClass('active');
+  $('.informarCep input').attr('placeholder','Digite o CEP')
+  //angular.bootstrap(document.getElementById("pnlRetiradaNaLoja"), ['AppAngular']);
+  var placesNearbyControllerAPP;
+  setTimeout(function(){
+    if(!placesNearbyControllerAPP)
+     placesNearbyControllerAPP=angular.bootstrap(document.getElementById("ctlrPnb"), ["AppAngular"]);
+  },1);
+  }
+  </script>
