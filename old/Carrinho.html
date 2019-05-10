@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<head>
+	<title></title>
+    <link rel="shortcut icon" href="imagens/favicon.ico" />
+
+    <script src="js/jquery.js" type="text/javascript"></script>       
+
+    <script src="js/modernizr.custom.js" type="text/javascript"></script> 
+    <script src="js/jquery.colorbox-min.js" type="text/javascript"></script> 
+      
+    <link href="css/templateSettings.css.razor" rel="stylesheet" type="text/css" /> 
+    <link rel="stylesheet" href="css/colorbox.css" />
+      
+    <componente name="cial:webanalytics" id="include_webAnalytics" />
+	<ciac:seo id="seo"></ciac:seo>
+  
+    <componente name="ciac:scriptrazor" id="script_headBottom" />     
+
+</head>
+<body>
+
+	
+	<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async="" defer="" src="//js.hs-scripts.com/5815978.js"></script>
+<!-- End of HubSpot Embed Code -->
+	
+	<script>
+  fbq('track', 'AddToCart');
+</script>
+	
+	<componente name="ciac:scriptrazor" id="script_bodyTop" />	
+	<script src="js/jquery.plugins.js" type="text/javascript"></script>    
+	
+	<div id="container">
+		<header id="header">
+          	<componente name="cial:header" id="include_header" />
+		</header>  
+      	<hr class="header-division" />
+		<div class="banner banner-header">
+			<div class="banner-full align-center banners-below">
+				<componente name="ciac:banner" id="header_full" />	
+			</div>
+		</div>
+		<div id="content">
+			<componente name="ciac:carrinho" id="cart" />
+		</div>
+		<footer id="footer">
+          	<componente name="cial:footer" id="include_footer" />
+		</footer>
+	</div>
+<div style="display:none;">  
+  <div id="messageQtdDenied">
+    <h2>Quantidade de unidades por produto excedido</h2>
+    <h3>Não é permitido comprar mais do que 5 unidades de cada produto. Por favor, diminua a quantidade de produtos comprados.</h3>
+  </div>
+</div>  
+<script type="text/javascript" src="js/jquery.compraRapida.js"></script>
+<script type="text/javascript" src="js/global.js"></script>
+<script src="https://buscacep.ciashop.com.br/bundles/cep"></script>
+<componente name="ciac:scriptrazor" id="script_bodyBottom" />
+
+</body>
+</html>

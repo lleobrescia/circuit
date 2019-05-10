@@ -1,0 +1,115 @@
+<div class="news">
+        <div class="news-info">
+        	<img src="imagens/envelop.png" alt="newsletter" />
+			<p>NEWSLETTER</p>
+        	<componente name="ciac:boletimnoticias" id="tidings" />
+        </div> 
+      </div> 
+
+
+<div class="footer-top">
+	<div class="institucional">
+      <div class="info-institucional">
+      		<componente name="ciac:paginasinstitucionais" id="institutional" />
+      </div>
+    </div>
+	<div class="footer-content">      	
+    	<div class="footer-institutional to-left">
+        	<h1 class="header_topo header-logo">
+        		<componente name="ciac:link" id="headerLogo" />
+            	<ul class="rede-socia">
+					<li><a href="https://www.instagram.com/circuitequipmentbrasil/?ct=t(Circuit_News_2017_25_9_2017)" target="_blank" class="google"><img src="imagens/icon-instagram.png" alt="Instagram" /></a></li>
+                  	<li><a href="https://plus.google.com/u/0/107893741281559379899" target="_blank" class="google"><img src="imagens/icon-google-plus.png" alt="Youtube" /></a></li>
+					<li><a href="https://www.facebook.com/circuitequipmentbrasil?ct=t(Circuit_News_2017_25_9_2017)" target="_blank" class="facebook"><img src="imagens/icon-facebook.png" alt="Facebook" /></a></li>
+					<li><a href="https://twitter.com/CEquipment" target="_blank" class="instagran"><img src="imagens/icon-twitter.png" alt="Instagran" /></a></li>
+				</ul>
+      		</h1>
+      	</div>
+        <!--
+        <h3>Institucional</h3>
+        <ul>
+          <componente name="ciac:paginasinstitucionais" id="institutional" />
+          <li><componente name="ciac:link" id="contact" /></li>
+          <li><componente name="ciac:link" id="faq" /></li>
+          <li class="affiliate-show"><componente name="ciac:link" id="affilated" /></li>
+          <li class="giftList-show"><componente name="ciac:link" id="giftList" /></li>
+          <li class="quickList-show"><componente name="ciac:link" id="readyList" /></li>
+          <li><componente name="ciac:scriptrazor" id="versaoMobile" /></li>
+        </ul>
+        -->
+        <div class="footer-info">
+        	<div class="antifraude">
+            	<p>Antifraude</p>
+              	<componente name="ciac:scriptrazor" id="sealsFooter" />
+          	</div>
+         	<div class="forma-pg">
+				<p>Formas de Pagamento</p>
+				<componente name="ciac:iconesrodape" id="paymentMethodsIcons" />     
+			</div>
+          	<div class="entregas">
+				<p>Formas de Entrega</p>
+				<img src="imagens/formas-de-envios.png" alt="Envios" />
+			</div>
+      	</div>
+        <div class="info-rodape">
+        	<componente name="ciac:scriptrazor" id="footer_social_helpDesk_storeInfo" /> 
+          	<a href="http://otimizadordesite.com.br/" target="_blank" class="ecomm"><img src="Assets/Uploads/otimizador-de-site.png" style="max-width:150px;" alt="otimizador de site" /></a>
+      	</div>
+       	<!--<componente name="ciac:scriptrazor" id="facebookBox" />-->      
+ 	 </div>
+</div>
+
+<!--
+   
+    
+  
+  <div class="container_pop" style="display:none">
+    <div id="box_pop">
+       <componente name="ciac:boletimnoticias" id="boletim_pop" />
+       <componente name="ciac:scriptrazor" id="boletim_pop_razor" />
+    </div>
+</div>  
+<script>
+$(document).ready(function(){
+          setTimeout(function(){
+            $.colorbox({width:"640px", height:"470px", inline:true, href:"#box_pop"});
+                    return false;
+          },5000);
+})
+  
+ if ($('.popNewsAux').attr('data-display-pop') == 'true') {
+  if(window.name == ""){ $(window).fadeIn("slow", function() { 
+    $(document).ready(function(){  
+          setTimeout(function(){
+            $.fn.colorbox({width:"640px", height:"470px", inline:true, href:"#box_pop"});
+                    return false;
+            });
+          },5000);
+    });
+
+  } 
+  }
+  jQuery(function () {
+    $('#colorbox, #cboxOverlay').appendTo('form:first');
+  }); 
+      function validarNewsPop() {
+    var cont = 0;
+      $("#popNews input").each(function(){
+            if($(this).val() == ""){
+            $(this).css({"border" : "1px solid red"});
+            cont++;
+            } else {
+            $(this).css({"border" : "1px solid #CCCCCC"});
+            }
+        });
+      if(cont == 0){
+   			  $(".btnNews").css("display","none");
+         $(".btNewsEnviar").css("display","block");
+        } else {
+      alert("Preencha corretamente os campos em vermelho");
+        
+    }
+  } 
+</script> 
+<script type="text/javascript">window.name = "1";</script>
+-->
