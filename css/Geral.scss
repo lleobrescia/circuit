@@ -1291,6 +1291,12 @@ ul {
   color: #fff;
   overflow: hidden;
   padding: 6px 10px;
+  background: transparent;
+}
+
+.collection-bottom {
+  display: flex;
+  justify-content: center;
 }
 
 .collection-pagination {
@@ -1300,52 +1306,76 @@ ul {
 
 .collection-pagination-pages {
   text-align: center;
-}
+  margin-top: 70px;
+  margin-bottom: 100px;
 
-.collection-pagination-pages a {
-  color: #fff;
-  display: inline-block;
-  margin: 0 2px;
-  padding: 1px 5px;
-}
+  a {
+    display: inline-block;
+    @include font-size(16);
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    line-height: 38px;
+    background: white;
+    color: $red;
+    border-radius: 90px;
+    margin-right: 13px;
 
-.collection-pagination-pages a.active,
-.collection-pagination-pages a:hover {
-  background: #fff;
-  border-radius: 2px;
+    &:active,
+    &:hover,
+    &.active {
+      background: $red;
+      color: white;
+    }
+  }
+
+  .next-page {
+    background: transparent;
+    width: auto;
+    border-radius: 0;
+  }
 }
 
 .collection-ordenation {
   float: right;
+
+  label {
+    font-family: 'din';
+    font-style: italic;
+    font-weight: 500;
+    @include font-size(16);
+  }
+
+  select {
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    font-family: 'din';
+    font-style: italic;
+    font-weight: 500;
+    @include font-size(12);
+    margin-left: 5px;
+    padding: 10px;
+  }
+
+  option {
+    color: $black;
+  }
 }
 
-.collection-ordenation select {
-  border: 1px solid #ccc;
-  color: #666;
-  font-size: 11px;
-  margin-left: 5px;
-  padding: 2px;
-}
 
 .collection>ul {
   font-size: 0;
   list-style: none;
-  margin: 0 auto;
   margin-top: 10px;
-  text-align: left;
-  width: 88%;
-
 }
 
 .collection>ul>li,
 .collection-ul-li {
   display: inline-block;
-  *display: inline;
-  *float: none;
   height: 100%;
   margin: 20px 0 20px 0;
   vertical-align: top;
-  *zoom: 1;
 }
 
 .col3 .collection-li {
@@ -1418,26 +1448,30 @@ ul {
 }
 
 .collection-product-name {
-  font-size: 12px;
-  font-weight: normal;
-  height: 45px;
-  line-height: 15px;
-  overflow: hidden;
-}
+  border: solid 2px white;
+  color: white;
+  display: block;
+  font-family: $font-sec;
+  margin-bottom: 20px;
+  margin-top: 23px;
+  padding: 15px 0;
+  text-align: center;
+  width: 100%;
+  @include font-size(14);
 
-.collection-product-name a {
-  color: #616060;
-  font-family: "Helvetica Neue LT Std";
-  font-size: 12px;
-  font-weight: bold;
-  line-height: 23px;
+  a {
+    color: white;
+  }
 }
 
 .collection-product-description {
-  font-size: 12px;
-  height: auto;
-  margin: 5px 0;
-  overflow: hidden;
+  font-family: 'din';
+  font-weight: 500;
+  @include font-size(10);
+  text-align: center;
+  color: white;
+  margin-bottom: 15px;
+  margin-top: 8px;
 }
 
 .collection-product-description a {
@@ -1449,10 +1483,10 @@ ul {
 }
 
 .collection-product-price {
-  color: #616060;
-  font-family: "Helvetica Neue L T Std";
-  font-size: 16px;
-  line-height: 23px;
+  color: white;
+  display: block;
+  font-family: 'atami-display';
+  @include font-size(22);
 }
 
 .collection-product-price a {
@@ -1472,12 +1506,11 @@ ul {
 }
 
 .collection-product-splitPrice {
-  color: #616060;
+  color: $yellow;
   display: block;
-  font-family: "Helvetica Neue LT Std";
-  font-size: 12px;
-  height: 15px;
-  line-height: 15px;
+  font-family: $font-sec;
+  font-style: italic;
+  @include font-size(13);
 }
 
 .collection-product-splitPrice a {
@@ -1550,8 +1583,11 @@ ul {
 }
 
 .collection-product-buy {
-  margin-top: 5px;
+  margin-top: 15px;
   overflow: hidden;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 20px;
 }
 
 .collection-product-unavailable {
@@ -1570,30 +1606,45 @@ ul {
 }
 
 .collection-product-buyInput {
-  float: left;
-  width: 70px;
+  font-family: 'din';
+  @include font-size(12);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  grid-gap: 5px;
+
+  input {
+    padding: 7px 13px !important;
+    border: solid 1px white !important;
+    background: transparent;
+    text-align: center;
+    color: $yellow !important;
+    width: 48px !important;
+    margin: 0 !important;
+  }
 }
 
-.collection-product-buyInput input {
-  padding: 8px 5px 8px 5px !important;
-  text-align: center;
-  width: 63% !important;
-}
 
 .collection .spin-bt {
-  float: left;
-  left: 0;
+  background: none !important;
+  position: relative !important;
+  height: auto !important;
+  font-size: 1.125rem !important;
+  line-height: 1pt !important;
+  width: auto !important;
 }
 
 .collection-product-buy-bt {
-  background-color: #8fb65d;
-  color: white;
-  float: right;
-  font-family: "Helvetica Neue LT Std";
-  font-size: 12px !important;
-  margin-top: -2px;
-  padding: 8px 14px !important;
   text-decoration: none;
+  background: transparent;
+  border: solid 1px $yellow !important;
+  color: $yellow !important;
+  padding: 10px !important;
+  font-family: 'din';
+  font-size: 0.75rem !important;
+  font-weight: 500;
+  border-radius: 0 !important;
+  text-align: center;
 }
 
 /*Migalha de Pão*/

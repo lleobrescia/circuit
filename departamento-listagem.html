@@ -1,94 +1,125 @@
-<div class="heading-primary">
-  <h1>[D0]</h1>
-</div>
 <div class="collection">
   <script>
- 	 $(".collection").adjustCollection();
+    $(".collection").adjustCollection();
   </script>
   <ul>
     <repeticao:produtos>
       <li class="collection-li">
         <div class="collection-product">
-            <div class="collection-product-image">
-                <condicao:promocao_express>
-                  <div class="collection-product-promoExpress">
-                    <a href="[D30]" class="link-modal-iframe"><img src="[D28]" alt="" /></a>
-                  </div>
-                </condicao:promocao_express>
-              	<condicao:promocao_frete>
-                  <div class="collection-product-shippingPromo">
-                    <a href="[D37]" class="link-modal-iframe"><img src="[D29]" alt="" /></a>
-                  </div>
-                </condicao:promocao_frete>
-                <a href="[D1]"><img src="[D2]?width=250&height=250" width="100%" alt="[D6]" data-otherimages="[D36]" /></a>
-              	<condicao:selo>
-                    <ul class="containerSelo">
-                      <repeticao:selos quantidade="3">
-                        <li class="seloBox">
-                          <img src="[D63]" alt="[D61]" />
-                          <div class="popupSelo">
-                            <p>[D61]</p>
-                            <p>[D62]</p>
-                          </div>
-                        </li>
-                      </repeticao:selos>
-                    </ul>
-                </condicao:selo>
-                <condicao:avaliacao>
-                  [D21] [D60]
-                </condicao:avaliacao>
-              	<condicao:produto_indisponivel>
-                    <div class="collection-product-unavailable">
-                          <a href="[D1]">Produto Indisponível</a>
+          <div class="collection-product-image">
+            <condicao:promocao_express>
+              <div class="collection-product-promoExpress">
+                <a href="[D30]" class="link-modal-iframe">
+                  <img src="[D28]" alt="" />
+                </a>
+              </div>
+            </condicao:promocao_express>
+            <condicao:promocao_frete>
+              <div class="collection-product-shippingPromo">
+                <a href="[D37]" class="link-modal-iframe">
+                  <img src="[D29]" alt="" />
+                </a>
+              </div>
+            </condicao:promocao_frete>
+            <a href="[D1]">
+              <img src="[D2]?width=250&height=250" width="100%" alt="[D6]" data-otherimages="[D36]" />
+            </a>
+            <condicao:selo>
+              <ul class="containerSelo">
+                <repeticao:selos quantidade="3">
+                  <li class="seloBox">
+                    <img src="[D63]" alt="[D61]" />
+                    <div class="popupSelo">
+                      <p>[D61]</p>
+                      <p>[D62]</p>
                     </div>
-                </condicao:produto_indisponivel>
-              	<condicao:lancamento>
-                      <a href="[D1]" class="collection-product-release">Lançamento</a>
-                </condicao:lancamento>
-              	<condicao:pre_venda>
-                      <a href="[D1]" class="collection-product-preSale">Pré-Venda</a>
-                </condicao:pre_venda>
-                <condicao:oferta>
-                      <a href="[D1]" class="collection-product-offer">[D54]% Off</a>
-                </condicao:oferta>
-                <condicao:espiar><a href="[D17]" class="collection-product-quickView sprite">Espiar</a></condicao:espiar>
+                  </li>
+                </repeticao:selos>
+              </ul>
+            </condicao:selo>
+            <condicao:avaliacao>
+              [D21] [D60]
+            </condicao:avaliacao>
+            <condicao:produto_indisponivel>
+              <div class="collection-product-unavailable">
+                <a href="[D1]">Produto Indisponível</a>
+              </div>
+            </condicao:produto_indisponivel>
+            <condicao:lancamento>
+              <a href="[D1]" class="collection-product-release">Lançamento</a>
+            </condicao:lancamento>
+            <condicao:pre_venda>
+              <a href="[D1]" class="collection-product-preSale">Pré-Venda</a>
+            </condicao:pre_venda>
+            <condicao:oferta>
+              <a href="[D1]" class="collection-product-offer">[D54]% Off</a>
+            </condicao:oferta>
+            <condicao:espiar><a href="[D17]" class="collection-product-quickView sprite">Espiar</a></condicao:espiar>
+          </div>
+          <h3 class="collection-product-name">
+            <a href="[D1]">[D6]</a>
+          </h3>
+          <condicao:produto_exibir_codigo>
+            <div class="collection-product-code">
+              <a href="[D1]">[D7]</a>
             </div>
-            <h3 class="collection-product-name"><a href="[D1]">[D6]</a></h3>
-          <condicao:produto_exibir_codigo><div class="collection-product-code"><a href="[D1]">[D7]</a></div></condicao:produto_exibir_codigo>
-            <div class="collection-product-description"><a href="[D1]">[D22]</a></div>
-            <div class="collection-product-variants">
-                <condicao:variante_imagem>
-                    <repeticao:variantes quantidade="8">
-                          <a href="[D34]"><img src="[D33]?width=15" alt="[D32]" /></a>
-                    </repeticao:variantes>
-                </condicao:variante_imagem>
-                <condicao:variante_texto>
-                    <repeticao:variantes quantidade="8">
-                          <a href="[D34]" class="collection-product-variants-text">[D32]</a>
-                    </repeticao:variantes>
-                </condicao:variante_texto>
-            </div>
-            <condicaofalsa:sob_orcamento>
-          	<div class="collection-product-price-content">
+          </condicao:produto_exibir_codigo>
+          <div class="collection-product-description">
+            <a href="[D1]">[D22]</a>
+          </div>
+          <div class="collection-product-variants">
+            <condicao:variante_imagem>
+              <repeticao:variantes quantidade="8">
+                <a href="[D34]">
+                  <img src="[D33]?width=15" alt="[D32]" />
+                </a>
+              </repeticao:variantes>
+            </condicao:variante_imagem>
+            <condicao:variante_texto>
+              <repeticao:variantes quantidade="8">
+                <a href="[D34]" class="collection-product-variants-text">
+                  [D32]
+                </a>
+              </repeticao:variantes>
+            </condicao:variante_texto>
+          </div>
+          <condicaofalsa:sob_orcamento>
+            <div class="collection-product-price-content">
               <p class="collection-product-price">
                 <condicao:preco_antigo><del>[D19]</del></condicao:preco_antigo>
-                <a href="[D1]"><small>Por:</small>[D15]</a>
+                <a href="[D1]">[D15]</a>
               </p>
-              <p class="collection-product-payInFullPrice"><condicao:desconto_vista><a href="[A1]"><strong>[D27]</strong> à vista</a></condicao:desconto_vista></p>
-              <p class="collection-product-splitPrice"><condicao:parcelamento><a href="[D1]">ou [D13] de <strong>[D12]</strong> sem juros</a></condicao:parcelamento></p>
-              <p class="collection-product-splitPrice"><condicao:parcelamento_com_juros><a href="[A1]">ou [D68] de <strong>[D67]</strong> juros de [D69]</a></condicao:parcelamento_com_juros></p>
+              <condicao:desconto_vista>
+                <p class="collection-product-payInFullPrice">
+                  <a href="[A1]"><strong>[D27]</strong> à vista</a>
+                </p>
+              </condicao:desconto_vista>
+              <p class="collection-product-splitPrice">
+                <condicao:parcelamento><a href="[D1]">ou [D13] de <strong>[D12]</strong> sem juros</a>
+                </condicao:parcelamento>
+              </p>
+              <p class="collection-product-splitPrice">
+                <condicao:parcelamento_com_juros><a href="[A1]">ou [D68] de <strong>[D67]</strong> juros de [D69]</a>
+                </condicao:parcelamento_com_juros>
+              </p>
             </div>
-            	<condicao:produto_disponivel>
-                  <condicao:comprar_direto>
-                     <div class="collection-product-buy">
-                          <div class="collection-product-buyInput spin form">[D23] <a href="[D25]" class="spin-bt spin-add collection-product-buy-add">+</a><a href="[D26]" class="spin-bt spin-remove collection-product-buy-remove">-</a></div><a href="[D24]" class="collection-product-buy-bt bt-big-secundary">Comprar</a>
-                     </div>
-                  </condicao:comprar_direto>
-                  <condicao:compra_rapida>
-                    <a href="[D66]" class="btn-buyFast btn-oneClickBuy">Comprar com um clique</a>
-                  </condicao:compra_rapida>
-              </condicao:produto_disponivel>
-            </condicaofalsa:sob_orcamento>
+            <condicao:produto_disponivel>
+              <condicao:comprar_direto>
+                <div class="collection-product-buy">
+                  <div class="collection-product-buyInput spin form">
+                    <a href="[D26]" class="spin-bt spin-remove collection-product-buy-remove">-</a>
+                    [D23]
+                    <a href="[D25]" class="spin-bt spin-add collection-product-buy-add">+</a>
+
+                  </div>
+                  <a href="[D24]" class="collection-product-buy-bt bt-big-secundary">Adicionar</a>
+                </div>
+              </condicao:comprar_direto>
+              <condicao:compra_rapida>
+                <a href="[D66]" class="btn-buyFast btn-oneClickBuy">Comprar com um clique</a>
+              </condicao:compra_rapida>
+            </condicao:produto_disponivel>
+          </condicaofalsa:sob_orcamento>
           <condicao:sob_orcamento>
             <div class="collection-product-buy">
               <a href="[D1]" class="collection-product-quoteRequest bt-big-secundary">Sob Orçamento</a>
