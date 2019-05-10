@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<head>
+	<title></title>
+    <link rel="shortcut icon" href="imagens/favicon.ico" />
+
+    <script src="js/jquery.js" type="text/javascript"></script>
+
+    <script src="js/owl.carousel.min.js"></script>
+	<script src="js/modernizr.custom.js" type="text/javascript"></script>
+    <script src="js/jquery.colorbox-min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/jquery.jqzoom-core-pack.js"></script>
+    <script type="text/javascript" src="js/jquery.jqzoom.custom.js"></script>
+
+    <link href="css/templateSettings.css.razor" rel="stylesheet" type="text/css" />
+    <link href="css/jquery.jqzoom.css" rel="stylesheet" type="text/css" />
+    <link href="css/jquery.jqzoom.custom.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/owl.carousel.css" />
+    <link rel="stylesheet" href="css/colorbox.css" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
+
+    <componente name="cial:webanalytics" id="include_webAnalytics" />
+	<ciac:seo id="seo"></ciac:seo>
+    <componente name="ciac:scriptrazor" id="script_headBottom" />
+</head>
+<body>
+
+
+	<componente name="ciac:scriptrazor" id="script_bodyTop" />
+	<script src="js/jquery.plugins.js" type="text/javascript"></script>
+
+	<div id="container">
+		<header id="header">
+			<componente name="cial:header" id="inlcude_header" />
+		</header>
+      	<hr class="header-division" />
+		<div class="banner banner-header">
+			<div class="banner-full align-center banners-below">
+				<componente name="ciac:banner" id="header_full" />
+			</div>
+		</div>
+		<div id="content">
+          	<div class="breadCrumb">
+                <componente name="ciac:produtobarranavegacao" id="breadCrumb" />
+            </div>
+          	<div class="product-top">
+          		<div class="product-top-left to-left w-42">
+                  	<componente name="ciac:imagensproduto" id="product_images" />
+                  	<componente name="ciac:scriptrazor" id="product_share" />
+              	</div>
+              	<div class="product-top-left to-right w-55">
+                    <componente name="ciac:produtonome" id="product_name" />
+                    <componente name="ciac:scriptrazor" id="product_rateTrustvox" />
+                  	<componente name="ciac:selosproduto" id="product_promotions" />
+                  	<componente name="ciac:precoproduto" id="product_price" />
+                  	<componente name="ciac:variantesproduto" id="product_variants" />
+                  <componente name="ciac:listapresentesadicionarproduto" id="adicionarProdutoLista" />
+                    <componente name="ciac:scriptrazor" id="anchor_trustvox" />
+                    <componente name="ciapkg:produtocustomizado" id="product_customization" />
+                  	<componente name="ciac:simularfreteproduto" id="product_shipping_simulate" />
+              	</div>
+          	</div>
+          	<div class="product-bottom">
+              	<componente name="ciac:produtodescricoes" id="product_descriptions" />
+              	<componente name="ciac:comprejunto" id="product_bundles" />
+                <componente name="ciac:produtosrelacionados" id="product_relatedProducts" />
+                <componente name="ciac:scriptrazor" id="app_trustvox" />
+              	<a href="#" name="rate" id="rate">&nbsp;</a>
+                <div class="product-coments-rate">
+                  <div class="heading-secundary">
+                      <h2>Avaliações e Comentários</h2>
+                  </div>
+                  <div class="product-rate to-left w-50">
+                    <componente name="ciac:produtoavaliar" id="product_rate" />
+                  </div>
+                  <div class="product-coments to-right w-50">
+                    <componente name="ciac:produtocomentario" id="product_coments" />
+                  </div>
+                </div>
+          	</div>
+		</div>
+		<footer id="footer">
+			<componente name="cial:footer" id="inlcude_footer" />
+		</footer>
+	</div>
+	<div class="ajaxLoader"></div>
+    <div class="hide product-rating-content"><componente name="ciac:produtoavaliar" id="product_rating" /></div>
+
+<script>
+$(function(){
+  $(".product-rating").prepend($(".product-rating-content .avaliacao_estrela").html());
+  $('.product-splitPrice-bt').live('click', function() {
+    $.colorbox({width:"480px", inline:true, href:"#product-splitPrice-details"});
+    return false;
+  });
+});
+</script>
+<script type="text/javascript" src="js/global.js"></script>
+<script src="https://buscacep.ciashop.com.br/bundles/cep"></script>
+<componente name="ciac:scriptrazor" id="script_bodyBottom" />
+
+<script type="text/javascript" src="/lib/angular/angular.js"></script>
+<script type="text/javascript" src="/lib/angular/main.js"></script>
+<script type="text/javascript" src="/lib/angular/filters/filter.js"></script>
+<script src="/lib/angular/modules/ngDialog.min.js"></script>
+<script type="text/javascript" src="/lib/angular/model/placesNearbyModel.js"></script>
+<script type="text/javascript" src="/lib/angular/services/placesNearbyService.js"></script>
+<script type="text/javascript" src="/lib/angular/controller/placesNearbyController.js"></script>
+
+</body>
+</html>
