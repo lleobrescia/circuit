@@ -104,6 +104,12 @@
     <footer id="footer">
       <componente name="cial:footer" id="include_footer" />
     </footer>
+
+    <div class="container_pop" style="display:none">
+      <div id="box_pop">
+        Produto adicionado ao carrinho!
+      </div>
+    </div>
   </div>
 
   <script type="text/javascript" src="js/jquery.compraRapida.js"></script>
@@ -119,7 +125,14 @@
         autoPlay: 5000,
         singleItem: true
       });
-      $("#header").floatHeader();
+      $('collection-product-buy-bt').on('click', function () {
+        $.colorbox({
+          width: "690px",
+          height: "510px",
+          inline: true,
+          href: "#box_pop"
+        });
+      });
     });
   </script>
   <componente name="ciac:scriptrazor" id="script_bodyBottom" />

@@ -1,6 +1,13 @@
 @import 'variables';
 /*simular frete*/
 
+
+@media (max-width:$break-md) {
+  .product-top-left {
+    width: 100% !important;
+  }
+}
+
 #product_shipping_simulate {
   clear: both;
 }
