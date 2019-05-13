@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<head>
+	<title></title>
+    <link rel="shortcut icon" href="imagens/favicon.ico" />
+
+    <script src="js/jquery.js" type="text/javascript"></script>       
+    
+	<script src="js/modernizr.custom.js" type="text/javascript"></script> 
+    <script src="js/jquery.colorbox-min.js" type="text/javascript"></script> 
+
+    <link href="css/templateSettings.css.razor" rel="stylesheet" type="text/css" /> 
+    <link rel="stylesheet" href="css/colorbox.css" />
+     
+    <componente name="cial:webanalytics" id="include_webAnalytics" />
+	<ciac:seo id="seo"></ciac:seo>
+    <componente name="ciac:scriptrazor" id="script_headBottom" />
+</head>
+<body>
+
+	
+	<componente name="ciac:scriptrazor" id="script_bodyTop" />
+	<script src="js/jquery.plugins.js" type="text/javascript"></script>    
+	
+	<div id="container">
+		<header id="checkout-header" class="step-identification">
+          	<componente name="cial:checkoutheader" id="include_checkoutheader" />
+		</header>  
+		<div class="banner banner-header">
+			<div class="banner-full align-center banners-below">
+				<componente name="ciac:banner" id="header_full" />
+			</div>
+		</div>
+		<div id="content">
+          	<componente name="ciac:identificacaocomprador" id="identification" />  
+		</div>
+		<footer id="checkout-footer">
+			<componente name="cial:checkoutfooter" id="include_checkoutfooter" />
+		</footer>
+	</div>
+      
+<script type="text/javascript" src="js/global.js"></script>
+<script src="https://buscacep.ciashop.com.br/bundles/cep"></script>
+<script>
+	$(function(){
+  		$(".form").formValidate();
+
+  	});      
+</script>
+<componente name="ciac:scriptrazor" id="script_bodyBottom" />
+
+</body>
+</html>

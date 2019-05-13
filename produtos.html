@@ -1,8 +1,33 @@
 <!DOCTYPE HTML>
 
-<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
 
 <head>
+
+  <!-- Metadados do Open Graph -->
+
+  <meta property="og:title" content="Camiseta Facebook" />
+
+  <meta property="og:description" content="Camiseta Unisex Facebook, Pequeno" />
+
+  <meta property="og:url" content="https://exemplo.org/facebook" />
+
+  <meta property="og:image" content="https://exemplo.org/facebook.jpg" />
+
+  <meta property="product:brand" content="Facebook" />
+
+  <meta property="product:availability" content="em estoque" />
+
+  <meta property="product:condition" content="novo" />
+
+  <meta property="product:price:amount" content="9.99" />
+
+  <meta property="product:price:currency" content="USD" />
+
+  <meta property="product:retailer_item_id" content="camiseta_facebook_001" />
+
+  <!-- Fim dos Metadados do Open Graph -->
+
   <title></title>
   <link rel="shortcut icon" href="imagens/favicon.ico" />
 
@@ -19,8 +44,6 @@
   <link href="css/jquery.jqzoom.custom.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="css/owl.carousel.css" />
   <link rel="stylesheet" href="css/colorbox.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
 
   <componente name="cial:webanalytics" id="include_webAnalytics" />
   <ciac:seo id="seo"></ciac:seo>
@@ -33,10 +56,7 @@
   <script src="js/jquery.plugins.js" type="text/javascript"></script>
 
   <componente name="cial:header" id="inlcude_header" />
-  <section class="banner banner-header">
-    <div class="banner-jquery">
-      <componente name="ciac:banner" id="header_jquery" />
-    </div>
+  <section class="banner-interno">
   </section>
   <section class="home-menu">
     <div class="home-menu__wrapper">
@@ -114,17 +134,10 @@
       });
     });
   </script>
+
   <script type="text/javascript" src="js/global.js"></script>
   <script src="https://buscacep.ciashop.com.br/bundles/cep"></script>
   <componente name="ciac:scriptrazor" id="script_bodyBottom" />
-
-  <script type="text/javascript" src="/lib/angular/angular.js"></script>
-  <script type="text/javascript" src="/lib/angular/main.js"></script>
-  <script type="text/javascript" src="/lib/angular/filters/filter.js"></script>
-  <script src="/lib/angular/modules/ngDialog.min.js"></script>
-  <script type="text/javascript" src="/lib/angular/model/placesNearbyModel.js"></script>
-  <script type="text/javascript" src="/lib/angular/services/placesNearbyService.js"></script>
-  <script type="text/javascript" src="/lib/angular/controller/placesNearbyController.js"></script>
 
 </body>
 
