@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+
+<head>
+  <title></title>
+  <link rel="shortcut icon" href="imagens/favicon.ico" />
+
+  <script src="js/jquery.js" type="text/javascript"></script>
+
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/modernizr.custom.js" type="text/javascript"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <script src="js/jquery.colorbox-min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="js/jquery.jqzoom-core-pack.js"></script>
+  <script type="text/javascript" src="js/jquery.jqzoom.custom.js"></script>
+
+  <link href="css/templateSettings.css.razor" rel="stylesheet" type="text/css" />
+  <link href="css/jquery.jqzoom.css" rel="stylesheet" type="text/css" />
+  <link href="css/jquery.jqzoom.custom.css" rel="stylesheet" type="text/css" />
+  <link type="text/css" media="screen" rel="stylesheet" href="css/quickview.css" />
+  <link rel="stylesheet" href="css/owl.carousel.css" />
+  <link rel="stylesheet" href="css/colorbox.css" />
+
+
+  <componente name="cial:webanalytics" id="include_webAnalytics" />
+  <ciac:seo id="seo"></ciac:seo>
+  <componente name="ciac:scriptrazor" id="script_headBottom" />
+</head>
+
+<body>
+
+  <componente name="ciac:scriptrazor" id="script_bodyTop" />
+  <script src="js/jquery.upPlugins.js" type="text/javascript"></script>
+
+  <componente name="cial:header" id="inlcude_header" />
+  <section class="banner-interno">
+  </section>
+  <section class="home-menu">
+    <div class="home-menu__wrapper">
+      <componente name="ciac:menu" id="menu_horizontal" />
+    </div>
+  </section>
+
+  <div class="bg-barro">
+    <div class="container">
+      <div class="metodo-entrega">
+      <componente name="ciac:carrinho" id="shipping_methods__cart_items" />
+      <componente name="ciac:scriptrazor" id="bt_go_to_payment" />
+      <componente name="ciac:carrinhoenderecoentrega" id="shipping_address" />
+    </div>
+
+  </div>
+</div>
+
+  <footer id="footer">
+    <componente name="cial:footer" id="include_footer" />
+  </footer>
+
+  <script type="text/javascript" src="js/global.js"></script>
+  <script>
+    $(".shipping-method input").live("change", function () {
+      $(".ajaxLoader").show();
+    });
+  </script>
+  <componente name="ciac:scriptrazor" id="script_bodyBottom" />
+
+</body>
+
+</html>

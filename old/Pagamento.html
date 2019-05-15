@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<head>
+	<title></title>
+    <link rel="shortcut icon" href="imagens/favicon.ico" />
+
+    <script src="js/jquery.js" type="text/javascript"></script>       
+    
+	<script src="js/modernizr.custom.js" type="text/javascript"></script> 
+    <script src="js/jquery.colorbox-min.js" type="text/javascript"></script>   
+
+    <link href="css/templateSettings.css.razor" rel="stylesheet" type="text/css" /> 
+    <link rel="stylesheet" href="css/colorbox.css" />
+      
+    <componente name="cial:webanalytics" id="include_webAnalytics" />
+	<ciac:seo id="seo"></ciac:seo>
+    <componente name="ciac:scriptrazor" id="script_headBottom" />
+</head>
+<body>
+
+	
+	<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async="" defer="" src="//js.hs-scripts.com/5815978.js"></script>
+<!-- End of HubSpot Embed Code -->
+	
+	<componente name="ciac:scriptrazor" id="script_bodyTop" />
+	<script src="js/jquery.plugins.js" type="text/javascript"></script>    
+	
+	<div id="container">
+		<header id="checkout-header" class="step-payment">
+          	<componente name="cial:checkoutheader" id="include_checkoutheader" />
+		</header>  
+		<div class="banner banner-header">
+			<div class="banner-full align-center banners-below">
+				<componente name="ciac:banner" id="header_full" />
+			</div>
+		</div>
+		<div id="content">
+          	<div class="to-left w-62">
+          		<componente name="ciac:paymentmethods" id="payment_methods" />
+          	</div>
+          	<div class="to-right w-35">
+              	<componente name="ciac:carrinhobonus" id="bonus" />
+          		<componente name="ciac:carrinho" id="cart_items" />              	
+              	<componente name="ciac:carrinhoenderecoentrega" id="shipping_address" />
+          	</div>
+		</div>
+		<footer id="checkout-footer">
+			<componente name="cial:checkoutfooter" id="include_checkoutfooter" />
+		</footer>
+	</div>
+      
+<script type="text/javascript" src="js/global.js"></script>
+<componente name="ciac:scriptrazor" id="script_bodyBottom" />
+
+</body>
+</html>

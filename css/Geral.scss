@@ -212,11 +212,11 @@
 
 body {
   background-color: $black;
+  color: white;
   font-family: $font-primary, sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
-  color: white;
 
   .to-left {
     float: left;
@@ -288,12 +288,12 @@ ul {
 }
 
 .banner-interno {
-  width: 100%;
   background-image: url('../imagens/banner-interno.png');
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 257px;
-  background-position: center;
+  width: 100%;
 }
 
 
@@ -872,11 +872,18 @@ ul {
   margin-bottom: 100px;
 
   @media (max-width: $break-sm) {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 
   &__grid {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
     order: 2;
 
     @media (min-width: $break-sm) {
@@ -918,6 +925,8 @@ ul {
 
   &__title {
     background-color: white;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
     margin-bottom: 30px;
     order: 1;
     padding: 25px 0;
@@ -926,8 +935,12 @@ ul {
 
     @media (min-width: $break-sm) {
       align-items: flex-end;
+      -webkit-box-align: end;
       clear: both;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
       display: inline-flex;
+      -ms-flex-align: end;
       float: right;
       height: 230px;
       margin-bottom: 0;
@@ -953,11 +966,11 @@ ul {
 }
 
 .path {
+  color: white;
   font-family: $font-stencil;
+  margin-bottom: 36px;
   text-transform: uppercase;
   @include font-size(14);
-  color: white;
-  margin-bottom: 36px;
 
   a {
     color: white;
@@ -993,19 +1006,24 @@ ul {
 
 .sobre {
   &__text {
-    box-shadow: 15px 15px 0px 0px $red;
-    padding: 15px 53px;
-    padding-bottom: 15px;
-    color: black;
     background: white;
-    margin-bottom: 89px;
+    -webkit-box-shadow: 15px 15px 0px 0px $red;
+    box-shadow: 15px 15px 0px 0px $red;
+    color: black;
     font-family: 'din';
     font-weight: 300;
+    margin-bottom: 89px;
+    padding: 15px 53px;
+    padding-bottom: 15px;
     @include font-size(16);
   }
 
   &__imagens {
+    -webkit-box-pack: justify;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     margin-bottom: 80px;
 
@@ -1014,13 +1032,13 @@ ul {
       position: relative;
 
       &::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
         background: url('../imagens/ic-plus.png') no-repeat center rgba(0, 0, 0, 0.6);
+        content: "";
         display: none;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 100%;
       }
 
       &:hover::after {
@@ -1034,10 +1052,11 @@ ul {
   }
 
   &__mapa {
-    height: 250px;
+    -webkit-box-shadow: -15px 15px 0px 0px $red;
     box-shadow: -15px 15px 0px 0px $red;
-    padding-bottom: 15px;
+    height: 250px;
     margin-bottom: 76px;
+    padding-bottom: 15px;
   }
 }
 
@@ -1104,6 +1123,19 @@ ul {
   text-align: center;
 }
 
+.miniCart-subtotal,
+.miniCart-total,
+.miniCart-shipping,
+.miniCart-bonus {
+  background: white;
+  color: $black;
+}
+
+.shipping-address-content a {
+  background: transparent !important;
+  color: $yellow;
+}
+
 
 /*Títulos*/
 
@@ -1115,6 +1147,7 @@ ul {
 
 .heading-primary h2,
 .heading-primary h1 {
+  color: $yellow;
   display: table;
   font-size: 20px;
   font-weight: normal;
@@ -1303,15 +1336,19 @@ ul {
 
 .collection-top,
 .collection-bottom {
+  background: transparent;
   border-radius: 3px;
   color: #fff;
   overflow: hidden;
   padding: 6px 10px;
-  background: transparent;
 }
 
 .collection-bottom {
+  -webkit-box-pack: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -1326,34 +1363,34 @@ ul {
 }
 
 .collection-pagination-pages {
-  text-align: center;
-  margin-top: 70px;
   margin-bottom: 100px;
+  margin-top: 70px;
+  text-align: center;
 
   a {
-    display: inline-block;
-    @include font-size(16);
-    width: 36px;
-    height: 36px;
-    text-align: center;
-    line-height: 38px;
     background: white;
-    color: $red;
     border-radius: 90px;
+    color: $yellow;
+    display: inline-block;
+    height: 36px;
+    line-height: 38px;
     margin-right: 13px;
+    text-align: center;
+    width: 36px;
+    @include font-size(16);
 
     &:active,
     &:hover,
     &.active {
       background: $red;
-      color: white;
+      color: $yellow;
     }
   }
 
   .next-page {
     background: transparent;
-    width: auto;
     border-radius: 0;
+    width: auto;
   }
 }
 
@@ -1368,15 +1405,15 @@ ul {
   }
 
   select {
-    border: 1px solid white;
     background: transparent;
+    border: 1px solid white;
     color: white;
     font-family: 'din';
     font-style: italic;
     font-weight: 500;
-    @include font-size(12);
     margin-left: 5px;
     padding: 10px;
+    @include font-size(12);
   }
 
   option {
@@ -1400,17 +1437,35 @@ ul {
 }
 
 .col3 .collection-li {
-  width: 28%;
+  width: 100%;
+
+  @media (min-width:$break-md) {
+    width: calc(100%/3);
+  }
+
+  @media (min-width:$break-xl) {
+    width: calc(100%/4);
+  }
 }
 
 .col4 .collection-li {
-  width: 25%;
+  width: 100%;
+
+  @media (min-width:$break-md) {
+    width: calc(100%/3);
+  }
+
+  @media (min-width:$break-xl) {
+    width: calc(100%/4);
+  }
 }
 
 .collection-product {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  display: grid;
   margin: 0 auto;
+  min-height: 510px;
   padding: 7px;
   -webkit-transition: all 200ms ease-out 0s;
   transition: all 200ms ease-out 0s;
@@ -1486,13 +1541,13 @@ ul {
 }
 
 .collection-product-description {
+  color: white;
   font-family: 'din';
   font-weight: 500;
-  @include font-size(10);
-  text-align: center;
-  color: white;
   margin-bottom: 15px;
   margin-top: 8px;
+  text-align: center;
+  @include font-size(10);
 }
 
 .collection-product-description a {
@@ -1604,11 +1659,11 @@ ul {
 }
 
 .collection-product-buy {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: auto 1fr;
   margin-top: 15px;
   overflow: hidden;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-gap: 20px;
 }
 
 .collection-product-unavailable {
@@ -1627,60 +1682,62 @@ ul {
 }
 
 .collection-product-buyInput {
-  font-family: 'din';
-  @include font-size(12);
-  display: grid;
-  grid-template-columns: auto 1fr auto;
   align-items: center;
+  -webkit-box-align: center;
+  display: grid;
+  -ms-flex-align: center;
+  font-family: 'din';
   grid-gap: 5px;
+  grid-template-columns: auto 1fr auto;
+  @include font-size(12);
 
   input {
-    padding: 7px 13px !important;
-    border: solid 1px white !important;
     background: transparent;
-    text-align: center;
+    border: solid 1px white !important;
     color: $yellow !important;
-    width: 48px !important;
     margin: 0 !important;
+    padding: 7px 13px !important;
+    text-align: center;
+    width: 48px !important;
   }
 }
 
 
 .collection .spin-bt {
   background: none !important;
-  position: relative !important;
-  height: auto !important;
   font-size: 1.125rem !important;
+  height: auto !important;
   line-height: 1pt !important;
+  position: relative !important;
   width: auto !important;
 }
 
 .collection-product-buy-bt {
-  text-decoration: none;
   background: transparent;
   border: solid 1px $yellow !important;
+  border-radius: 0 !important;
   color: $yellow !important;
-  padding: 10px !important;
   font-family: 'din';
   font-size: 0.75rem !important;
   font-weight: 500;
-  border-radius: 0 !important;
+  padding: 10px !important;
   text-align: center;
+  text-decoration: none;
 }
 
 /*Migalha de Pão*/
 .bread-crumb {
-  width: 100%;
   margin-bottom: 40px;
+  width: 100%;
 
   a,
   span {
     color: white;
     display: inline-block;
-    @include font-size(14);
     font-family: $font-stencil;
     font-weight: bold;
     text-transform: uppercase;
+    @include font-size(14);
   }
 
   span {
@@ -1884,13 +1941,17 @@ ul {
 .form-item {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  color: #666;
+  color: $yellow;
   display: inline-block;
   overflow: hidden;
   padding: 5px 15px;
   position: relative;
   vertical-align: top;
   vertical-align: top;
+}
+
+.box-politicas-de-senha ul {
+  background: transparent !important;
 }
 
 .form-item label {
@@ -1953,7 +2014,7 @@ ul {
 }
 
 .form-title {
-  color: #666;
+  color: $yellow;
   display: block;
   font-size: 13px;
   margin-right: 5px;
@@ -2138,9 +2199,9 @@ ul {
 
 .bt-small-secundary,
 .bt-small-secundary a {
+  background: $yellow;
   border: 0;
-  border-radius: 3px;
-  color: #fff;
+  color: $black;
   cursor: pointer;
   display: inline-block;
   font-size: 12px;
@@ -2208,9 +2269,9 @@ ul {
 }
 
 .bt-big-special {
+  background: $yellow !important;
   border: 0;
-  border-radius: 3px;
-  color: #fff;
+  color: $black;
   cursor: pointer;
   display: inline-block;
   font-size: 17px;
@@ -2237,6 +2298,7 @@ ul {
 /*Compra Rápida*/
 
 #buy-message {
+  background: white;
   padding: 10px;
   text-align: center;
 }
